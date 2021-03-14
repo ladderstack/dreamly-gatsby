@@ -96,24 +96,22 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - label: "Sub Heading"
-            name: "sub-heading"
+            name: "subheading"
             widget: "object"
             fields:
-              - { label: English Text, name: eng-text, widget: string }
-              - { label: Jap Text, name: jap-text, widget: string }
+              - { label: English Text, name: engtext, widget: string }
+              - { label: Jap Text, name: japtext, widget: string }
               - { label: Description, name: description, widget: string }
           - label: "Core Values"
-            name: "core-values"
+            name: "corevalues"
             widget: "list"
             fields:
               - { label: Heading, name: heading, widget: string }
-              - { label: Jap Heading, name: jap-heading, widget: string }
+              - { label: Jap Heading, name: japheading, widget: string }
               - { label: Description, name: description, widget: string }
           - label: "5 likes"
             name: "five-likes"
             widget: "list"
             fields:
-              - { label: Heading, name: heading, widget: markdown }
-              - { label: Image, name: image, widget: image }
               - { label: Description, name: description, widget: string }
-          - { label: Job Link, name: job-link, widget: string }
+          - { label: Job Link, name: joblink, widget: string }
