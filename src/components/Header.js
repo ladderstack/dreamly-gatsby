@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
 import logo from "../images/logo.svg"
+import $ from "jquery"
 
 const Header = () => {
+  useEffect(() => {})
   return (
     <div className="header-bar-area">
       <div className="header-left">
