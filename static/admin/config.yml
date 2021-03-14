@@ -14,7 +14,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Job Title", name: "job-title", widget: "string" }
-      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "Title", widget: "string" }
       - { label: "Jap Name", name: "jap-name", widget: "string" }
       - { label: "Profile Picture", name: "profile-pic", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
