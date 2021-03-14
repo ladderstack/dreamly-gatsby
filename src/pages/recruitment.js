@@ -5,6 +5,7 @@ import data from "../../content/recruitment.json"
 import thumb from "../../static/img/logo-4.svg"
 import upload from "../../static/img/upload.png"
 import titleImage from "../../static/img/shape-polygon.svg"
+import thumbImage from "../../static/img/thumb.svg"
 
 const Recruitment = () => {
   return (
@@ -69,11 +70,10 @@ const Recruitment = () => {
                 <div className="col-lg-4" key={index}>
                   <div className="simple-item">
                     <div className="icon">
-                      <img src={like.image} alt="Image" />
+                      <img src={thumbImage} alt="Image" />
                       <span className="number">{index + 1}</span>
                     </div>
 
-                    <div dangerouslySetInnerHTML={{ __html: like.heading }} />
                     <div
                       dangerouslySetInnerHTML={{ __html: like.description }}
                     />
