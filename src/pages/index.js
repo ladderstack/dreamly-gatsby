@@ -2,19 +2,20 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import test from "../../content/about.json"
+import data from "../../content/home.json"
 import HomeSlider from "../components/HomeSlider"
+import parabola from "../../static/img/parabola-2.svg"
+import parabola3 from "../../static/img/parabola-3.svg"
 
-const BlogIndex = ({ data, location }) => {
-  console.log(test)
+const BlogIndex = ({ location }) => {
   return (
     <Layout>
       <SEO title="All posts" />
 
       <div className="hero-wrap">
-        <img className="hero-img" src="assets/img/hero-bg.png" alt="Image" />
+        <img className="hero-img" src={data.heroimage.image} alt="Image" />
         <div className="hero-content">
-          <h1>もっと「カンタン」へ。</h1>
+          <h1>{data.heroimage.heading}</h1>
           <p>
             ”テクノロジーの力で無駄をなくし、
             <br className="d-lg-none" />
@@ -35,45 +36,24 @@ const BlogIndex = ({ data, location }) => {
                     <div className="about-text v1">
                       <h2>
                         <span>
-                          <img src="assets/img/parabola-2.svg" alt="Image" />
+                          <img src={parabola} alt="Image" />
                           About
                         </span>
                         Dreamly
                       </h2>
-                      <p>
-                        ドリームリーは、香川に拠点を置く <br />
-                        ITスタートアップ企業です。IT人材が少なく、 <br />
-                        テクノロジーの恩恵を受けにくい地方から、 <br />
-                        変化をもたらしていきます。
-                      </p>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: data.aboutDreamly.description,
+                        }}
+                      />
                       <div className="about-btn v1">
-                        <a href="#" className="link">
+                        <a href={data.aboutDreamly.moreLink} className="link">
                           More
                         </a>
                       </div>
                     </div>
                   </div>
-                  {/* <div className="col-xl-6 offset-xl-0 dreamly-bg col-md-8 col-lg-10 offset-lg-1 p-m-0">
-                    <div className="about-slider-v1">
-                      <div className="slider-item">
-                        <img src="assets/img/photo-1.png" alt="Image" />
-                        <p>弊社エントランス</p>
-                      </div>
-                      <div className="slider-item">
-                        <img src="assets/img/photo-2.png" alt="Image" />
-                        <p>弊社エントランス</p>
-                      </div>
-                      <div className="slider-item">
-                        <img src="assets/img/photo-3.png" alt="Image" />
-                        <p>弊社エントランス</p>
-                      </div>
-                      <div className="slider-item">
-                        <img src="assets/img/photo-4.png" alt="Image" />
-                        <p>弊社エントランス</p>
-                      </div>
-                    </div>
-                  </div> */}
-                  <HomeSlider />
+                  <HomeSlider sliderObject={data.aboutDreamly.sliderImages} />
                 </div>
               </div>
             </div>
@@ -86,44 +66,24 @@ const BlogIndex = ({ data, location }) => {
                     <div className="about-text v2">
                       <h2>
                         <span>
-                          <img src="assets/img/parabola-3.svg" alt="Image" />
+                          <img src={parabola3} alt="Image" />
                           What
                         </span>
                         We do
                       </h2>
-                      <p>
-                        「地方・行政のデジタル化に向けた自社プロダクト <br />
-                        開発」と、「ITコンサルティング及び受託開発」の <br />
-                        ２事業を展開しています。 <br />
-                        また、インキュベーション施設も建設中です。
-                      </p>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: data.whatWeDo.description,
+                        }}
+                      />
                       <div className="about-btn v1">
-                        <a href="#" className="link">
+                        <a href={data.whatWeDo.moreLink} className="link">
                           More
                         </a>
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-6 offset-xl-0 p-m-0 col-md-8 col-lg-10 offset-lg-1">
-                    <div className="about-slider-v1">
-                      <div className="slider-item">
-                        <img src="assets/img/photo-2.png" alt="Image" />
-                        <p>弊社エントランス</p>
-                      </div>
-                      <div className="slider-item">
-                        <img src="assets/img/photo-1.png" alt="Image" />
-                        <p>弊社エントランス</p>
-                      </div>
-                      <div className="slider-item">
-                        <img src="assets/img/photo-3.png" alt="Image" />
-                        <p>弊社エントランス</p>
-                      </div>
-                      <div className="slider-item">
-                        <img src="assets/img/photo-4.png" alt="Image" />
-                        <p>弊社エントランス</p>
-                      </div>
-                    </div>
-                  </div>
+                  <HomeSlider sliderObject={data.whatWeDo.sliderImages} />
                 </div>
               </div>
             </div>
