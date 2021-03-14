@@ -3,9 +3,9 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import test from "../../content/about.json"
+import HomeSlider from "../components/HomeSlider"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
   console.log(test)
   return (
     <Layout>
@@ -53,7 +53,7 @@ const BlogIndex = ({ data, location }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-6 offset-xl-0 dreamly-bg col-md-8 col-lg-10 offset-lg-1 p-m-0">
+                  {/* <div className="col-xl-6 offset-xl-0 dreamly-bg col-md-8 col-lg-10 offset-lg-1 p-m-0">
                     <div className="about-slider-v1">
                       <div className="slider-item">
                         <img src="assets/img/photo-1.png" alt="Image" />
@@ -72,7 +72,8 @@ const BlogIndex = ({ data, location }) => {
                         <p>弊社エントランス</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
+                  <HomeSlider />
                 </div>
               </div>
             </div>
