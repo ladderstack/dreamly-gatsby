@@ -3,8 +3,10 @@ import Layout from "../components/layout"
 import whiteD from "../images/shape-2.png"
 import Parabola from "../images/parabola-2.svg"
 import CeoMessage from "../images/parabola-one.svg"
+import data from "../../content/about.json"
 
 const About = () => {
+  console.log(data)
   return (
     <Layout>
       <div className="content-wrap">

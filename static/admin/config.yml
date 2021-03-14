@@ -92,7 +92,7 @@ collections:
                     }
       - label: "Recruitment Page"
         name: "Recruitment"
-        file: "content/recruitment.yml"
+        file: "content/recruitment.json"
         fields:
           - { label: Title, name: title, widget: string }
           - label: "Sub Heading"
