@@ -7,6 +7,18 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 collections:
+  - name: "Members"
+    label: "Members"
+    folder: "site/content/members"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Job Title", name: "job-title", widget: "string" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Jap Name", name: "jap-name", widget: "string" }
+      - { label: "Profile Picture", name: "profile-pic", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Skills", name: "skills", widget: "string" }
   - label: "Pages"
     name: "pages"
     files:
