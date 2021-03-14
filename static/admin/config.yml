@@ -151,8 +151,9 @@ collections:
                 fields:
                   - { label: Slider Title, name: sliderTitle, widget: string }
                   - { label: Image, name: image, widget: image }
-          - label: "Do SOmething"
+          - label: "Do Something"
             name: "doSomething"
+            widget: "object"
             fields:
               - { label: Heading, name: heading, widget: string }
               - { label: Image, name: image, widget: image }

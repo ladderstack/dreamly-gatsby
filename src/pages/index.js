@@ -6,6 +6,7 @@ import data from "../../content/home.json"
 import HomeSlider from "../components/HomeSlider"
 import parabola from "../../static/img/parabola-2.svg"
 import parabola3 from "../../static/img/parabola-3.svg"
+import upload from "../../static/img/upload.png"
 
 const BlogIndex = ({ location }) => {
   return (
@@ -16,14 +17,9 @@ const BlogIndex = ({ location }) => {
         <img className="hero-img" src={data.heroimage.image} alt="Image" />
         <div className="hero-content">
           <h1>{data.heroimage.heading}</h1>
-          <p>
-            ”テクノロジーの力で無駄をなくし、
-            <br className="d-lg-none" />
-            もっとカンタンな社会にしたい” <br className="d-none d-lg-block" />
-            という想いのもと、
-            <br className="d-lg-none" />
-            地方のデジタル化・行政のデジタル化を進めています。
-          </p>
+          <div
+            dangerouslySetInnerHTML={{ __html: data.heroimage.description }}
+          />
         </div>
       </div>
       <div className="about-wrap section-padding pb-4 overflow-hidden">
@@ -137,19 +133,19 @@ const BlogIndex = ({ location }) => {
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
               <div className="section-title">
-                <h3>一緒に何か面白いことしませんか？</h3>
+                <h3>{data.doSomething.heading}</h3>
               </div>
             </div>
             <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
               <div className="promo-content">
                 <span className="d-xl-none">初めて見た人わからん？</span>
-                <img src="assets/img/img-1.png" alt="Image" />
+                <img src={data.doSomething.image} alt="Image" />
               </div>
             </div>
             <div className="col-lg-12 text-center">
               <a href="#" className="btn v1">
                 問い合わせはコチラから
-                <img src="assets/img/upload.png" alt="Image" />
+                <img src={upload} alt="Image" />
               </a>
             </div>
           </div>
