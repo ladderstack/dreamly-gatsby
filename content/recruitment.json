@@ -1,0 +1,38 @@
+{
+  "title": "RECRUITMENT",
+  "sub-heading": {
+    "eng-text": "Try, Fail, Iterate!",
+    "jap-text": "の精神",
+    "description": "熱い想いをもった仲間を募集しています！"
+  },
+  "core-values": [
+    {
+      "heading": "Be Passionate",
+      "jap-heading": "パッションに生きる",
+      "description": "自分の中の「熱量」を大事にし、 それに向かって貪欲に成長し続けよう。"
+    },
+    {
+      "heading": "Be Unique",
+      "jap-heading": "唯一無二の存在であれ",
+      "description": "となりの人とは違う自分だけの強みを 磨き続けよう。"
+    },
+    {
+      "heading": "Be Challenging",
+      "jap-heading": "まずは、やってみよう",
+      "description": "やってみて失敗したら、何か学んで、 また次やってみよう。"
+    }
+  ],
+  "five-likes": [
+    {
+      "heading": "#### 人間関係",
+      "description": "オープンマインドで、どんどん意見 を出し合える関係です！",
+      "image": "/img/thumb-1.png"
+    },
+    {
+      "heading": "<h4>フレキシブルな<br/>勤務時間</h4>",
+      "image": "/img/thumb-2.png",
+      "description": "「自由と責任は一対」という スウェーデンのマインドを取り入 れています。"
+    }
+  ],
+  "job-link": "#"
+}
