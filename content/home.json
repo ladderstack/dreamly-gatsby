@@ -40,5 +40,10 @@
         "image": "/img/photo-3.png"
       }
     ]
+  },
+  "doSomething": {
+    "heading": "一緒に何か面白いことしませんか？",
+    "image": "/img/shape-polygon.svg",
+    "link": "#"
   }
 }
