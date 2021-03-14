@@ -25,7 +25,7 @@ collections:
     files:
       - label: "About Page"
         name: "about"
-        file: "content/about.yml"
+        file: "content/about.md"
         fields:
           - { label: Vision, name: vision, widget: string }
           - { label: Mission, name: mission, widget: string }
