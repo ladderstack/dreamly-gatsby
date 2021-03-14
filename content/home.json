@@ -1,0 +1,44 @@
+{
+  "title": "Home",
+  "heroimage": {
+    "image": "/img/hero-bg.png",
+    "heading": "もっと「カンタン」へ。",
+    "description": "弊社エントランス"
+  },
+  "aboutDreamly": {
+    "description": "<p>\n                        ドリームリーは、香川に拠点を置く <br />\n                        ITスタートアップ企業です。IT人材が少なく、 <br />\n                        テクノロジーの恩恵を受けにくい地方から、 <br />\n                        変化をもたらしていきます。\n                      </p>",
+    "moreLink": "#",
+    "sliderImages": [
+      {
+        "sliderTitle": "弊社エントランス",
+        "image": "/img/photo-1.png"
+      },
+      {
+        "sliderTitle": "弊社エントランス",
+        "image": "/img/photo-2.png"
+      },
+      {
+        "sliderTitle": "弊社エントランス",
+        "image": "/img/photo-3.png"
+      }
+    ]
+  },
+  "whatWeDo": {
+    "description": "<p>\n                        「地方・行政のデジタル化に向けた自社プロダクト <br />\n                        開発」と、「ITコンサルティング及び受託開発」の <br />\n                        ２事業を展開しています。 <br />\n                        また、インキュベーション施設も建設中です。\n                      </p>",
+    "moreLink": "#",
+    "sliderImages": [
+      {
+        "sliderTitle": "弊社エントランス",
+        "image": "/img/photo-1.png"
+      },
+      {
+        "sliderTitle": "弊社エントランス",
+        "image": "/img/photo-2.png"
+      },
+      {
+        "sliderTitle": "弊社エントランス",
+        "image": "/img/photo-3.png"
+      }
+    ]
+  }
+}
