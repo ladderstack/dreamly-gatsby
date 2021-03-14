@@ -7,33 +7,100 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 collections:
-   - label: "Pages"
+  - label: "Pages"
     name: "pages"
     files:
       - label: "About Page"
         name: "about"
-        file: "content/about.yml"
+        file: "site/content/about.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
+          - { label: Vision, name: vision, widget: string }
+          - { label: Mission, name: mission, widget: string }
+          - { label: Message From CEO, name: message_ceo, widget: markdown }
+          - label: Company Profile
+            name: companyprofile
+            widget: "object"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
-      - label: "Locations Page"
-        name: "locations"
-        file: "site/content/locations.yml"
+              - { label: Name, name: name, widget: string }
+              - { label: Setup, name: setup, widget: string }
+              - { label: Capital, name: capital, widget: string }
+              - {
+                  label: Business content,
+                  name: business_content,
+                  widget: string,
+                }
+              - { label: Representative, name: representative, widget: string }
+              - { label: Location, name: location, widget: string }
+              - {
+                  label: Number of Employess,
+                  name: number-employees,
+                  widget: string,
+                }
+              - label: "SNS"
+                name: "SNS"
+                widget: object
+                fields:
+                  - { label: "Facebook", name: "facebook", widget: string }
+                  - { label: "Twitter", name: "twitter", widget: string }
+                  - { label: "Github", name: "github", widget: string }
+              - label: "Consultant"
+                name: "consultant"
+                widget: "object"
+                fields:
+                  - {
+                      label: "General Advisor",
+                      name: "generaladvisor",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Consultant tax accountant",
+                      name: "consultanttax",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Advisor company labor and social security attorney",
+                      name: "advisor-company",
+                      widget: "string",
+                    }
+                  - {
+                      label: "General Counsel",
+                      name: "general-counsel",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Design Advisor",
+                      name: "design-advisor",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Agile Advisor",
+                      name: "agile-advisor",
+                      widget: "string",
+                    }
+      - label: "Recruitment Page"
+        name: "Recruitment"
+        file: "site/content/recruitment.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Locations
-            name: locations
-            widget: list
+          - { label: Title, name: title, widget: string }
+          - label: "Sub Heading"
+            name: "sub-heading"
+            widget: "object"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Address, name: address, widget: string}
-
-
+              - { label: English Text, name: eng-text, widget: string }
+              - { label: Jap Text, name: jap-text, widget: string }
+              - { label: Description, name: description, widget: string }
+          - label: "Core Values"
+            name: "core-values"
+            widget: "list"
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Jap Heading, name: jap-heading, widget: string }
+              - { label: Description, name: description, widget: string }
+          - label: "5 likes"
+            name: "five-likes"
+            widget: "list"
+            fields:
+              - { label: Heading, name: heading, widget: markdown }
+              - { label: Image, name: image, widget: image }
+              - { label: Description, name: description, widget: string }
+          - { label: Job Link, name: job-link, widget: string }
