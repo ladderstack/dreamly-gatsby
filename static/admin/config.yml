@@ -12,9 +12,9 @@ collections:
     folder: "content/members"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    identifier_field: Title
+    identifier_field: title
     fields:
-      - { label: "Title", name: "Title", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Job Title", name: "job-title", widget: "string" }
       - { label: "Jap Name", name: "jap-name", widget: "string" }
       - { label: "Profile Picture", name: "profile-pic", widget: "image" }
