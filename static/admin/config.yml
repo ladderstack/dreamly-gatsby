@@ -28,7 +28,17 @@ collections:
         file: "content/about.json"
         fields:
           - { label: Vision, name: vision, widget: string }
+          - {
+              label: Vision Description,
+              name: visionDescription,
+              widget: markdown,
+            }
           - { label: Mission, name: mission, widget: string }
+          - {
+              label: Mission Description,
+              name: missionDescription,
+              widget: markdown,
+            }
           - { label: Message From CEO, name: message_ceo, widget: markdown }
           - label: Company Profile
             name: companyprofile

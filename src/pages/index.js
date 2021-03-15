@@ -128,7 +128,7 @@ const BlogIndex = ({ location }) => {
           </div>
         </div>
       </div>
-      {/* <div className="promo-wrap section-padding">
+      <div className="promo-wrap section-padding">
         <div className="container">
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
@@ -150,7 +150,7 @@ const BlogIndex = ({ location }) => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </Layout>
   )
 }
