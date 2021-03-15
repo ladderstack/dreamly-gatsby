@@ -7,6 +7,20 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 collections:
+  - label: "Settings"
+    name: "settings"
+    files:
+      - label: "Header Settings"
+        name: "headerSettings"
+        file: "content/header.json"
+        fields:
+          - { label: "Logo", name: "logo", widget: image }
+          - label: "Menu"
+            name: "menu"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: string }
+              - { label: "Url", name: "url", widget: string }
   - name: "Press"
     label: "Press"
     folder: "content/press"
