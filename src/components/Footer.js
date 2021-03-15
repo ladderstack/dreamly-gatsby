@@ -1,5 +1,6 @@
 import React from "react"
-import logo from "../images/logo.svg"
+import footerData from "../../content/footer.json"
+import { Link } from "gatsby"
 
 const Footer = () => {
   return (
@@ -9,12 +10,10 @@ const Footer = () => {
           <div className="col-md-3">
             <div className="footer-widget v1">
               <a href="index.html" className="footer-logo">
-                <img src={logo} className="img-fluid" alt="Image" />
+                <img src={footerData.logo} className="img-fluid" alt="Image" />
               </a>
               <div className="copyright d-none d-sm-block">
-                <a href="#">利用規約／免責事項</a>
-                <a href="#">プライバシーポリシー</a>
-                <p>©Dreamly Inc. All Rights Reserved.</p>
+                <div dangerouslySetInnerHTML={{ __html: footerData.copy }} />
               </div>
             </div>
           </div>
@@ -22,21 +21,13 @@ const Footer = () => {
             <div className="footer-widget v2">
               <h3>About</h3>
               <ul>
-                <li>
-                  <a href="#">VISION</a>
-                </li>
-                <li>
-                  <a href="#">MISSION</a>
-                </li>
-                <li>
-                  <a href="#">CEO MESSAGE</a>
-                </li>
-                <li>
-                  <a href="#">MEMBER</a>
-                </li>
-                <li>
-                  <a href="#">会社概要</a>
-                </li>
+                {footerData.aboutMenu.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <Link to={item.url}>{item.name}</Link>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           </div>
@@ -44,9 +35,13 @@ const Footer = () => {
             <div className="footer-widget">
               <h3>Service</h3>
               <ul>
-                <li>
-                  <a href="#">WHAT WE DO</a>
-                </li>
+                {footerData.serviceMenu.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <Link to={item.url}>{item.name}</Link>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           </div>
@@ -59,23 +54,19 @@ const Footer = () => {
             <div className="footer-widget">
               <h3>Recruitment</h3>
               <ul>
-                <li>
-                  <a href="#">CORE VALUE</a>
-                </li>
-                <li>
-                  <a href="#">Dreamy’s 5 LIKE!</a>
-                </li>
-                <li>
-                  <a href="#">JOBS</a>
-                </li>
+                {footerData.recruitmentMenu.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <Link to={item.url}>{item.name}</Link>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           </div>
           <div className="col-12 d-sm-none">
             <div className="copyright">
-              <a href="#">利用規約／免責事項</a>
-              <a href="#">プライバシーポリシー</a>
-              <p>©Dreamly Inc. All Rights Reserved.</p>
+              <div dangerouslySetInnerHTML={{ __html: footerData.copy }} />
             </div>
           </div>
         </div>
