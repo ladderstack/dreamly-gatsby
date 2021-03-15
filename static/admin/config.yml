@@ -21,36 +21,36 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: string }
               - { label: "Url", name: "url", widget: string }
-    - label: "Footer Settings"
-        name: "footerSettings"
-        file: "content/footer.json"
-        fields:
-          - { label: "Logo", name: "logo", widget: image }
-          - { label: "Copy Text", name: "copy", widget: markdown }
-          - label: "About Menu"
-            name: "aboutMenu"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: string }
-              - { label: "Url", name: "url", widget: string }
-          - label: "Service Menu"
-            name: "serviceMenu"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: string }
-              - { label: "Url", name: "url", widget: string }
-          - label: "Press Menu"
-            name: "pressMenu"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: string }
-              - { label: "Url", name: "url", widget: string }
-          - label: "Recruitment Menu"
-            name: "recruitmentMenu"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: string }
-              - { label: "Url", name: "url", widget: string }
+      - label: "Footer Settings"
+          name: "footerSettings"
+          file: "content/footer.json"
+          fields:
+            - { label: "Logo", name: "logo", widget: image }
+            - { label: "Copy Text", name: "copy", widget: markdown }
+            - label: "About Menu"
+              name: "aboutMenu"
+              widget: "list"
+              fields:
+                - { label: "Name", name: "name", widget: string }
+                - { label: "Url", name: "url", widget: string }
+            - label: "Service Menu"
+              name: "serviceMenu"
+              widget: "list"
+              fields:
+                - { label: "Name", name: "name", widget: string }
+                - { label: "Url", name: "url", widget: string }
+            - label: "Press Menu"
+              name: "pressMenu"
+              widget: "list"
+              fields:
+                - { label: "Name", name: "name", widget: string }
+                - { label: "Url", name: "url", widget: string }
+            - label: "Recruitment Menu"
+              name: "recruitmentMenu"
+              widget: "list"
+              fields:
+                - { label: "Name", name: "name", widget: string }
+                - { label: "Url", name: "url", widget: string }
   - name: "Press"
     label: "Press"
     folder: "content/press"
