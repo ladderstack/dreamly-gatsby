@@ -4,6 +4,11 @@ job-title: CEO
 jap-name: ラーション・ラーシュ
 profile-pic: /img/avavtar-2.png
 skills: マルチリンガル, マルチリンガル, マルチリンガル, マルチリンガル
+SNS:
+  facebook: "#"
+  twitter: "#"
+  github: "#"
+  linkedin: "#"
 ---
 ### Try,Fail,Iterate.
 
