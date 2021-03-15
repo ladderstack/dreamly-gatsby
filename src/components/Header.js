@@ -1,5 +1,6 @@
+import { Link } from "gatsby"
 import React, { useEffect } from "react"
-import logo from "../images/logo.svg"
+import headerData from "../../content/header.json"
 
 const Header = () => {
   useEffect(() => {})
@@ -7,31 +8,20 @@ const Header = () => {
     <div className="header-bar-area">
       <div className="header-left">
         <a className="logo" href="index.html">
-          <img src={logo} alt="Logo" />
+          <img src={headerData.logo} alt="Logo" />
         </a>
       </div>
       <div className="header-right">
         <ul className="main-menu">
-          <li className="nav-item">
-            <a className="nav-link" href="about.html">
-              About{" "}
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="service.html">
-              Service
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="press.html">
-              Press
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="recruitment.html">
-              Recruitment
-            </a>
-          </li>
+          {headerData.menu.map((item, index) => {
+            return (
+              <li className="nav-item" key={index}>
+                <Link className="nav-link" to={item.url}>
+                  {item.name}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
         <div className="hamburger-menu">
           <span className="line-top"></span>
