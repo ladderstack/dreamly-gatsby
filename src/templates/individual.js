@@ -121,6 +121,7 @@ export const pageQuery = graphql`
         skills
         title
         jap_name
+        smallImage
         SNS {
           facebook
           github

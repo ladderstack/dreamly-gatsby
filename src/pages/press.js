@@ -1,8 +1,14 @@
+import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
 import NewsImage from "../images/parabola-4.svg"
+import _ from "lodash"
+import moment from "moment"
 
-const Press = () => {
+const Press = ({ data }) => {
+  const dataByYear = _.groupBy(data.allMarkdownRemark.nodes, test =>
+    moment(test.frontmatter.date).format("YYYY")
+  )
   return (
     <Layout>
       <div className="content-wrap">
@@ -13,54 +19,28 @@ const Press = () => {
                 <div className="section-title v1">
                   <h2>Press</h2>
                 </div>
-                <div className="news-item-wrap">
-                  <h4 className="news-date">
-                    <img src={NewsImage} alt="Image" />
-                    2021
-                  </h4>
-                  <a className="news-item">
-                    <span className="date"> 2021.10.01 </span>
-                    <p>
-                      株式会社、社員の枠組みと働き方を再定義した人事制度「WIDE」をスタート
-                    </p>
-                  </a>
-                  <a className="news-item">
-                    <span className="date">2021.10.01</span>
-                    <p>
-                      株式会社、社員の枠組みと働き方を再定義した人事制度「WIDE」をスタート
-                    </p>
-                  </a>
-                  <a className="news-item">
-                    <span className="date"> 2021.10.01</span>
-                    <p>
-                      株式会社、社員の枠組みと働き方を再定義した人事制度「WIDE」をスタート
-                    </p>
-                  </a>
-                </div>
-                <div className="news-item-wrap">
-                  <h4 className="news-date">
-                    <img src={NewsImage} alt="Image" />
-                    2020
-                  </h4>
-                  <a className="news-item">
-                    <span className="date"> 2020.10.01</span>
-                    <p>
-                      株式会社、社員の枠組みと働き方を再定義した人事制度「WIDE」をスタート
-                    </p>
-                  </a>
-                  <a className="news-item">
-                    <span className="date">2020.10.01</span>
-                    <p>
-                      株式会社、社員の枠組みと働き方を再定義した人事制度「WIDE」をスタート
-                    </p>
-                  </a>
-                  <a className="news-item">
-                    <span className="date">2020.10.01</span>
-                    <p>
-                      株式会社、社員の枠組みと働き方を再定義した人事制度「WIDE」をスタート
-                    </p>
-                  </a>
-                </div>
+                {Object.keys(dataByYear).map((year, index) => {
+                  return (
+                    <div className="news-item-wrap" index={index}>
+                      <h4 className="news-date">
+                        <img src={NewsImage} alt="Image" />
+                        {year}
+                      </h4>
+                      {dataByYear[`${year}`].map((yearValue, index) => {
+                        return (
+                          <a className="news-item" href="" key={index}>
+                            <span className="date">
+                              {moment(yearValue.frontmatter.date).format(
+                                "YYYY.MM.DD"
+                              )}{" "}
+                            </span>
+                            <p>{yearValue.frontmatter.title}</p>
+                          </a>
+                        )
+                      })}
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -71,3 +51,18 @@ const Press = () => {
 }
 
 export default Press
+
+export const pressQuery = graphql`
+  query MyQuery {
+    allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "press" } } }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          date
+        }
+      }
+    }
+  }
+`

@@ -8,7 +8,8 @@ import parabola from "../../static/img/parabola-2.svg"
 import parabola3 from "../../static/img/parabola-3.svg"
 import upload from "../../static/img/upload.png"
 
-const BlogIndex = ({ location }) => {
+const BlogIndex = props => {
+  console.log(props)
   return (
     <Layout>
       <SEO title="All posts" />
@@ -94,30 +95,14 @@ const BlogIndex = ({ location }) => {
                 <h2>Press</h2>
               </div>
               <div className="news-item-wrap">
-                <a className="news-item">
-                  <span className="date">2020.10.01</span>
-                  <p>
-                    株式会社、社員の枠組みと働き方を再定義した人事制度「WIDE」をスタート
-                  </p>
-                </a>
-                <a className="news-item">
-                  <span className="date">2020.10.01</span>
-                  <p>
-                    株式会社、社員の枠組みと働き方を再定義した人事制度「WIDE」をスタート
-                  </p>
-                </a>
-                <a className="news-item">
-                  <span className="date">2020.10.01</span>
-                  <p>資金調達実施</p>
-                </a>
-                <a className="news-item">
-                  <span className="date">2019.10.15</span>
-                  <p>事業拡大のため、オフィス移転</p>
-                </a>
-                <a className="news-item">
-                  <span className="date">2019.01.11</span>
-                  <p>株式会社Dreamly設立</p>
-                </a>
+                {props.data.allMarkdownRemark.nodes.map((press, index) => {
+                  return (
+                    <a className="news-item" href="#">
+                      <span className="date">{press.frontmatter.date}</span>
+                      <p>{press.frontmatter.title}</p>
+                    </a>
+                  )
+                })}
               </div>
               <div className="about-btn v4">
                 <a href="#" className="link">
@@ -156,3 +141,18 @@ const BlogIndex = ({ location }) => {
 }
 
 export default BlogIndex
+
+export const homeQuery = graphql`
+  query homeQuery {
+    allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "press" } } }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          date(formatString: "YYYY-MM-DD")
+        }
+      }
+    }
+  }
+`

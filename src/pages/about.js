@@ -8,7 +8,7 @@ import sign from "../../static/img/ceo-sign.png"
 import fb from "../../static/img/fb.png"
 import data from "../../content/about.json"
 import logoMmber from "../../static/img/logo-3.png"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 const About = props => {
   console.log(props)
@@ -111,10 +111,12 @@ const About = props => {
                 <div className="team-item-wrap">
                   {props.data.allMarkdownRemark.nodes.map((member, index) => {
                     return (
-                      <div className="team-member">
-                        <img src={member.frontmatter.profile_pic} alt="Image" />
-                        <p>{member.frontmatter.job_title}</p>
-                        <h4>{member.frontmatter.title}</h4>
+                      <div className="team-member" key={index}>
+                        <img src={member.frontmatter.smallImage} alt="Image" />
+                        <Link to={member.fields.slug} key={index}>
+                          <p>{member.frontmatter.job_title}</p>
+                          <h4>{member.frontmatter.title}</h4>
+                        </Link>
                       </div>
                     )
                   })}
@@ -271,12 +273,16 @@ export const aboutQuery = graphql`
       filter: { frontmatter: { templateKey: { eq: "members" } } }
     ) {
       nodes {
+        fields {
+          slug
+        }
         frontmatter {
           job_title
           profile_pic
           skills
           title
           jap_name
+          smallImage
           SNS {
             facebook
             github
