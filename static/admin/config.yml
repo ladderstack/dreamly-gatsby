@@ -7,6 +7,20 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 collections:
+  - name: "Press"
+    label: "Press"
+    folder: "content/press"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    fields:
+     - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "press",
+        }
+      - {label: Title, name: title, widget: string}
   - name: "Members"
     label: "Members"
     folder: "content/members"
