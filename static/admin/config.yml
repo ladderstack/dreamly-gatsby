@@ -14,6 +14,12 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: title
     fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "members",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Job Title", name: "job-title", widget: "string" }
       - { label: "Jap Name", name: "jap-name", widget: "string" }

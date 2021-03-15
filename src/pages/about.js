@@ -3,6 +3,9 @@ import Layout from "../components/layout"
 import whiteD from "../images/shape-2.png"
 import Parabola from "../images/parabola-2.svg"
 import CeoMessage from "../images/parabola-one.svg"
+import ceo from "../../static/img/ceo.png"
+import sign from "../../static/img/ceo-sign.png"
+import fb from "../../static/img/fb.png"
 import data from "../../content/about.json"
 
 const About = () => {
@@ -36,27 +39,24 @@ const About = () => {
                 <div className="about-content">
                   <img src={whiteD} alt="Iamge" className="shape-one" />
                   <h2>
-                    <span>Vision </span>パッションに時間を費やせる社会へ。
+                    <span>Vision </span>
+                    {data.vision}
                   </h2>
-                  <p>
-                    「パッション＝本当に自分がやりたいこと」に大切な時間を
-                    割きたい。
-                    <br />
-                    しかし現実は、非効率的な作業やプロセスが溢れています。
-                    <br />
-                    テクノロジーによる効率化が、人々に「時間と心の余裕」を与え得ることを、北欧諸国は証明しています。
-                    <br />
-                    もっとシンプルでいい。注ぐべきところに、時間とエネルギーを費やせる社会を創りましょう。
-                  </p>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: data.visionDescription }}
+                  />
                 </div>
                 <div className="about-content">
                   <img src={whiteD} alt="Iamge" className="shape-one" />
                   <h2>
-                    <span>Mission </span>もっと「カンタン」へ。
+                    <span>Mission </span>
+                    {data.mission}
                   </h2>
-                  <p>
-                    複雑・非効率的な作業を、もっとカンタンにすることで、人々に意義ある時間を生み出します。
-                  </p>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: data.missionDescription,
+                    }}
+                  />
                 </div>
               </div>
             </div>
@@ -69,12 +69,12 @@ const About = () => {
                 <div className="about-text v3 text-center">
                   <h2>
                     <span>
-                      <img src="assets/img/parabola-one.svg" alt="Image" />
+                      <img src={CeoMessage} alt="Image" />
                       CEO
                     </span>
                     Message
                   </h2>
-                  <img src="assets/img/ceo.png" alt="Image" />
+                  <img src={ceo} alt="Image" />
                 </div>
               </div>
             </div>
@@ -85,38 +85,12 @@ const About = () => {
               <div className="row justify-content-center">
                 <div className="col-lg-10 col-xl-8">
                   <div className="ceo-msg">
-                    <p>
-                      「カンタンへ」の先にある未来像は、「パッションに時間を費やせる社会」
-                      日本とスウェーデンの両国を経験して感じたこと。
-                    </p>
-                    <p>
-                      それは、「社会がカンタンであることは、人びとの幸せに繋がる。」
-                    </p>
-                    <p>
-                      日本に移住してから、あらゆる場面で「無駄・複雑」なプロセスを経験しました。
-                      例えば、名前・住所・電話番号を何度も書くという作業。
-                      スウェーデンでは、マイナンバーさえ入力すれば自動入力されるため、「手書きで個人情報を書く」
-                      という場面に遭遇することがありません。
-                    </p>
-                    <p>
-                      しかし、日本で聞こえてくるのは「これが普通だと思って気にしたこともなかった」
-                      「日本はそう簡単に変われないよ」という声。
-                    </p>
-                    <p>
-                      ICT化すれば、どんなに「カンタンな世界」が待っているかを知ってしまっている私にとって、
-                      日本の現状は決して放っておけるものではありませんでした。
-                    </p>
-                    <p>
-                      ドリームリーが目指すのは「パッションに時間を費やせる社会」。
-                      そのために私たちが為すべきことは、ITのチカラで無駄・複雑なプロセスを無くすことです。
-                    </p>
-                    <p>
-                      これは、ICT先進国・幸福度ランキング上位・イノベーションが多く生まれる北欧で、既に実現して
-                      いること。必ず日本にも実現可能な未来像です。
-                    </p>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: data.message_ceo }}
+                    />
                   </div>
                   <div className="ceo-sign">
-                    <img src="assets/img/ceo-sign.png" alt="Image" />
+                    <img src={sign} alt="Image" />
                   </div>
                 </div>
               </div>
@@ -178,7 +152,7 @@ const About = () => {
                       <h4>会社名</h4>
                     </div>
                     <div className="info-desc">
-                      <p>株式会社Dreamly（英：Dreamly Inc.）</p>
+                      <p>{data.companyprofile.name}</p>
                     </div>
                   </div>
                   <div className="comp-profile-info-item">
@@ -186,7 +160,7 @@ const About = () => {
                       <h4>設立</h4>
                     </div>
                     <div className="info-desc">
-                      <p>2019年1月</p>
+                      <p>{data.companyprofile.setup}</p>
                     </div>
                   </div>
                   <div className="comp-profile-info-item">
@@ -194,7 +168,7 @@ const About = () => {
                       <h4>資本金</h4>
                     </div>
                     <div className="info-desc">
-                      <p>300万円</p>
+                      <p>{data.companyprofile.capital}</p>
                     </div>
                   </div>
                   <div className="comp-profile-info-item">
@@ -202,7 +176,7 @@ const About = () => {
                       <h4>事業内容</h4>
                     </div>
                     <div className="info-desc">
-                      <p>システムの開発発売および 情報処理・提供サービス業務</p>
+                      <p>{data.companyprofile.business_content}</p>
                     </div>
                   </div>
                   <div className="comp-profile-info-item">
@@ -210,7 +184,7 @@ const About = () => {
                       <h4>代表者</h4>
                     </div>
                     <div className="info-desc">
-                      <p>ラーション・ラーシュ</p>
+                      <p>{data.companyprofile.representative}</p>
                     </div>
                   </div>
                   <div className="comp-profile-info-item">
@@ -219,26 +193,40 @@ const About = () => {
                     </div>
                     <div className="info-desc">
                       <p>
-                        総合顧問　　 <span>濱川武明</span>
+                        総合顧問　　{" "}
+                        <span>
+                          {data.companyprofile.consultant.generaladvisor}
+                        </span>
                       </p>
                       <p>
-                        顧問税理士　 <span>米田智範税理士事務所</span>
+                        顧問税理士　{" "}
+                        <span>
+                          {data.companyprofile.consultant.consultanttax}
+                        </span>
                       </p>
                       <p>
-                        顧問社労士　 <span>東社会保険労務士事務所</span>
+                        顧問社労士　{" "}
+                        <span>
+                          {data.companyprofile.consultant["advisor-company"]}
+                        </span>
                       </p>
                       <p>
                         顧問弁護士　
                         <span>
-                          八木俊則 <br />
-                          　　　　　　 (あおみ総合法律事務所）
+                          {data.companyprofile.consultant["general-counsel"]}
                         </span>
                       </p>
                       <p>
-                        デザイン顧問　 <span>林 雄三</span>
+                        デザイン顧問　{" "}
+                        <span>
+                          {data.companyprofile.consultant["design-advisor"]}
+                        </span>
                       </p>
                       <p>
-                        アジャイル顧問 <span>懸田 剛</span>
+                        アジャイル顧問{" "}
+                        <span>
+                          {data.companyprofile.consultant["agile-advisor"]}
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -247,7 +235,7 @@ const About = () => {
                       <h4>所在地</h4>
                     </div>
                     <div className="info-desc">
-                      <p>〒760-0054</p>
+                      <p>{data.companyprofile.location}</p>
                       <p>香川県高松市常盤町1丁目6-6</p>
                     </div>
                   </div>
@@ -256,7 +244,7 @@ const About = () => {
                       <h4>社員数</h4>
                     </div>
                     <div className="info-desc">
-                      <p>6人</p>
+                      <p>{data.companyprofile["number-employees"]}</p>
                     </div>
                   </div>
                   <div className="comp-profile-info-item">
@@ -266,23 +254,18 @@ const About = () => {
                     <div className="info-desc">
                       <ul>
                         <li>
-                          <a href="#">
-                            <img src="assets/img/fb.png" alt="Image" />
+                          <a href={data.companyprofile.SNS.facebook}>
+                            <img src={fb} alt="Image" />
                           </a>
                         </li>
                         <li>
-                          <a href="#">
-                            <img src="assets/img/fb.png" alt="Image" />
+                          <a href={data.companyprofile.SNS.twitter}>
+                            <img src={fb} alt="Image" />
                           </a>
                         </li>
                         <li>
-                          <a href="#">
-                            <img src="assets/img/fb.png" alt="Image" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <img src="assets/img/fb.png" alt="Image" />
+                          <a href={data.companyprofile.SNS.github}>
+                            <img src={fb} alt="Image" />
                           </a>
                         </li>
                       </ul>
