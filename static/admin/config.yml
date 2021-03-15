@@ -26,6 +26,14 @@ collections:
       - { label: "Profile Picture", name: "profile-pic", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Skills", name: "skills", widget: "string" }
+      - label: SNS
+        name: SNS
+        widget: object
+        fields:
+          - {label: "facebook", name: "facebook". widget: string}
+          - {label: "twitter", name: "twitter". widget: string}
+          - {label: "github", name: "github". widget: string}
+          - {label: "linkedin", name: "linkedin". widget: string}
   - label: "Pages"
     name: "pages"
     files:
