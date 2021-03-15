@@ -7,8 +7,11 @@ import ceo from "../../static/img/ceo.png"
 import sign from "../../static/img/ceo-sign.png"
 import fb from "../../static/img/fb.png"
 import data from "../../content/about.json"
+import logoMmber from "../../static/img/logo-3.png"
+import { graphql } from "gatsby"
 
-const About = () => {
+const About = props => {
+  console.log(props)
   console.log(data)
   return (
     <Layout>
@@ -102,40 +105,19 @@ const About = () => {
             <div className="row justify-content-center">
               <div className="col-lg-10 col-xl-8">
                 <div className="section-title v4">
-                  <img src="assets/img/logo-3.png" alt="Image" />
+                  <img src={logoMmber} alt="Image" />
                   <h2>Member</h2>
                 </div>
                 <div className="team-item-wrap">
-                  <div className="team-member">
-                    <img src="assets/img/member-1.png" alt="Image" />
-                    <p>CEO・ CTO</p>
-                    <h4>Lars Larsson</h4>
-                  </div>
-                  <div className="team-member">
-                    <img src="assets/img/member-1.png" alt="Image" />
-                    <p>取締役</p>
-                    <h4>藤田 朋巳</h4>
-                  </div>
-                  <div className="team-member">
-                    <img src="assets/img/member-1.png" alt="Image" />
-                    <p>社外取締役</p>
-                    <h4>小宮 直子</h4>
-                  </div>
-                  <div className="team-member">
-                    <img src="assets/img/member-1.png" alt="Image" />
-                    <p>プロダクトオーナー</p>
-                    <h4>松原 風郎</h4>
-                  </div>
-                  <div className="team-member">
-                    <img src="assets/img/member-1.png" alt="Image" />
-                    <p>フロントエンドエンジニア</p>
-                    <h4>上野 元輝</h4>
-                  </div>
-                  <div className="team-member">
-                    <img src="assets/img/member-1.png" alt="Image" />
-                    <p>UI/UXデザイナー</p>
-                    <h4>林　祐里</h4>
-                  </div>
+                  {props.data.allMarkdownRemark.nodes.map((member, index) => {
+                    return (
+                      <div className="team-member">
+                        <img src={member.frontmatter.profile_pic} alt="Image" />
+                        <p>{member.frontmatter.job_title}</p>
+                        <h4>{member.frontmatter.title}</h4>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -282,3 +264,27 @@ const About = () => {
 }
 
 export default About
+
+export const aboutQuery = graphql`
+  query about {
+    allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "members" } } }
+    ) {
+      nodes {
+        frontmatter {
+          job_title
+          profile_pic
+          skills
+          title
+          jap_name
+          SNS {
+            facebook
+            github
+            linkedin
+            twitter
+          }
+        }
+      }
+    }
+  }
+`

@@ -1,8 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import upload from "../../static/img/upload.png"
 
 const Individual = ({ data }) => {
+  console.log(data)
   const { markdownRemark } = data
   return (
     <Layout>
@@ -14,19 +16,18 @@ const Individual = ({ data }) => {
               <span>{markdownRemark.frontmatter.job_title}</span>
               <p>{markdownRemark.frontmatter.jap_name}</p>
               <h3>{markdownRemark.frontmatter.title}</h3>
+
               <ul className="taglist">
-                <li>
-                  <a href="#">マルチリンガル</a>
-                </li>
-                <li>
-                  <a href="#">フルスタックエンジニア</a>
-                </li>
-                <li>
-                  <a href="#">エンジニアファクトリー講師</a>
-                </li>
-                <li>
-                  <a href="#">子煩悩</a>
-                </li>
+                {markdownRemark.frontmatter.skills &&
+                  markdownRemark.frontmatter.skills
+                    .split(",")
+                    .map((skill, index) => {
+                      return (
+                        <li key={index}>
+                          <a href="#">{skill}</a>
+                        </li>
+                      )
+                    })}
               </ul>
               <ul className="social_profile">
                 <span>SNS</span>
@@ -58,17 +59,9 @@ const Individual = ({ data }) => {
               <div className="row align-items-end">
                 <div className="col-xl-6">
                   <div className="member-description">
-                    <h3>
-                      <span className="xl-none">手書き</span> Try,Fail,Iterate.
-                    </h3>
-                    <p>
-                      スウェーデン王立大コンピューターサイエンス学科卒業。Stockholm・東京での
-                      エンジニア経験を経て、2019年香川にて起業（2017年日本移住)。
-                      日本のパブリックサービスIT化の遅れを大問題だと感じ、業務プロセスの効率化
-                      をミッションに掲げ活動中。
-                      また、県内民間初のインキュベーション構想にも参画。
-                      日本のアニメが大好きです。おすすめがあれば教えて下さい！
-                    </p>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+                    />
                   </div>
                 </div>
                 <div className="col-lg-4 offset-lg-2 lg-none">
@@ -80,7 +73,7 @@ const Individual = ({ data }) => {
                     />
                     <a href="#" className="btn v4">
                       詳しく知りたい方はコチラから
-                      <img src="assets/img/upload.png" alt="Image" />
+                      <img src={upload} alt="Image" />
                     </a>
                   </div>
                 </div>
