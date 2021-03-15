@@ -30,10 +30,10 @@ collections:
         name: SNS
         widget: object
         fields:
-          - {label: "facebook", name: "facebook". widget: string}
-          - {label: "twitter", name: "twitter". widget: string}
-          - {label: "github", name: "github". widget: string}
-          - {label: "linkedin", name: "linkedin". widget: string}
+          - { label: "facebook", name: "facebook", widget: string }
+          - { label: "twitter", name: "twitter", widget: string }
+          - { label: "github", name: "github", widget: string }
+          - { label: "linkedin", name: "linkedin", widget: string }
   - label: "Pages"
     name: "pages"
     files:
