@@ -1,0 +1,21 @@
+{
+  "logo": "/img/logo.svg",
+  "menu": [
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Service",
+      "url": "/service"
+    },
+    {
+      "name": "Press",
+      "url": "/press"
+    },
+    {
+      "name": "RECRUITMENT",
+      "url": "/recruitment"
+    }
+  ]
+}
