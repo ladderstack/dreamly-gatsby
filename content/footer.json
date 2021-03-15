@@ -1,0 +1,46 @@
+{
+  "logo": "/img/logo.svg",
+  "copy": "<a href=\"#\">利用規約／免責事項</a>\n                <a href=\"#\">プライバシーポリシー</a>\n                <p>©Dreamly Inc. All Rights Reserved.</p>",
+  "aboutMenu": [
+    {
+      "name": "Vision",
+      "url": "#"
+    },
+    {
+      "name": "Mission",
+      "url": "#"
+    },
+    {
+      "name": "CEO Message",
+      "url": "#"
+    },
+    {
+      "name": "Member",
+      "url": "#"
+    },
+    {
+      "name": "会社概要",
+      "url": "#"
+    }
+  ],
+  "serviceMenu": [
+    {
+      "name": "What we do",
+      "url": "#"
+    }
+  ],
+  "recruitmentMenu": [
+    {
+      "name": "CORE VALUE",
+      "url": "#"
+    },
+    {
+      "name": "Dreamy’s 5 LIKE!",
+      "url": "#"
+    },
+    {
+      "name": "JOBS",
+      "url": "#"
+    }
+  ]
+}
