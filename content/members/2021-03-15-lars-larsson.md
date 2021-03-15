@@ -5,6 +5,7 @@ job-title: CEO
 jap-name: ラーション・ラーシュ
 profile-pic: /img/avavtar-2.png
 skills: マルチリンガル, マルチリンガル, マルチリンガル, マルチリンガル
+smallImage: /img/member-1.png
 SNS:
   facebook: "#"
   twitter: "#"
