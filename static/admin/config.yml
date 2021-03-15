@@ -21,6 +21,7 @@ collections:
           default: "press",
         }
       - {label: Title, name: title, widget: string}
+      - {label: Date, name: date, widget: date}
   - name: "Members"
     label: "Members"
     folder: "content/members"
