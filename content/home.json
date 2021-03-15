@@ -3,7 +3,7 @@
   "heroimage": {
     "image": "/img/hero-bg.png",
     "heading": "もっと「カンタン」へ。",
-    "description": "弊社エントランス"
+    "description": "<p>\n            ”テクノロジーの力で無駄をなくし、<br\n              class=\"d-lg-none\"\n            />もっとカンタンな社会にしたい” <br class=\"d-none d-lg-block\" />\n            という想いのもと、<br\n              class=\"d-lg-none\"\n            />地方のデジタル化・行政のデジタル化を進めています。\n          </p>"
   },
   "aboutDreamly": {
     "description": "<p>\n                        ドリームリーは、香川に拠点を置く <br />\n                        ITスタートアップ企業です。IT人材が少なく、 <br />\n                        テクノロジーの恩恵を受けにくい地方から、 <br />\n                        変化をもたらしていきます。\n                      </p>",
