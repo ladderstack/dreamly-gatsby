@@ -7,9 +7,9 @@ const Header = () => {
   return (
     <div className="header-bar-area">
       <div className="header-left">
-        <a className="logo" href="index.html">
+        <Link className="logo" to="/">
           <img src={headerData.logo} alt="Logo" />
-        </a>
+        </Link>
       </div>
       <div className="header-right">
         <ul className="main-menu">

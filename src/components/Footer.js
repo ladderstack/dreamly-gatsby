@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-3">
             <div className="footer-widget v1">
-              <a href="index.html" className="footer-logo">
+              <Link to="/" className="footer-logo">
                 <img src={footerData.logo} className="img-fluid" alt="Image" />
-              </a>
+              </Link>
               <div className="copyright d-none d-sm-block">
                 <div dangerouslySetInnerHTML={{ __html: footerData.copy }} />
               </div>
