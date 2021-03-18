@@ -3,9 +3,9 @@ templateKey: members
 title: Lars Larsson
 job-title: CEO
 jap-name: ラーション・ラーシュ
-profile-pic: static/img/avavtar-2.png
+profile-pic: /img/avavtar-2.png
 skills: マルチリンガル, マルチリンガル, マルチリンガル, マルチリンガル
-smallImage: static/img/member-1.png
+smallImage: /img/member-1.png
 SNS:
   facebook: "#"
   twitter: "#"

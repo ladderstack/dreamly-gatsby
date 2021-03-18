@@ -3,8 +3,8 @@ backend:
   repo: ladderstack/dreamly-gatsby
   branch: master
 
-media_folder: src/static/img
-public_folder: static
+media_folder: static/img
+public_folder: /img
 publish_mode: editorial_workflow
 collections:
   - label: "Settings"
