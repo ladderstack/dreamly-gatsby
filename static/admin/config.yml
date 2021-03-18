@@ -4,7 +4,7 @@ backend:
   branch: master
 
 media_folder: static/img
-public_folder: /img
+public_folder: static/img
 publish_mode: editorial_workflow
 collections:
   - label: "Settings"
@@ -99,7 +99,7 @@ collections:
     files:
       - label: "About Page"
         name: "about"
-        file: "content/about.json"
+        file: "content/about.md"
         fields:
           - { label: Vision, name: vision, widget: string }
           - {
