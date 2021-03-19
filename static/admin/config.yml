@@ -12,8 +12,14 @@ collections:
     files:
       - label: "Header Settings"
         name: "headerSettings"
-        file: "content/header.json"
+        file: "content/header.md"
         fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "header",
+            }
           - { label: "Logo", name: "logo", widget: image }
           - label: "Menu"
             name: "menu"
