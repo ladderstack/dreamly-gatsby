@@ -211,6 +211,53 @@ collections:
             fields:
               - { label: Description, name: description, widget: markdown }
           - { label: Job Link, name: joblink, widget: string }
+      - label: "Services"
+        name: "Services"
+        file: "content/services.md"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "services",
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: First Sliter Title,
+              name: firstSliderTitle,
+              widget: string,
+            }
+          - label: "First Slider"
+            name: "firstSlider"
+            widget: "object"
+            fields:
+              - { label: image, name: image, widget: image }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Description, name: description, widget: markdown }
+          - {
+              label: Second Sliter Title,
+              name: secondSliderTitle,
+              widget: string,
+            }
+          - label: "Second Slider"
+            name: "secondSlider"
+            widget: "object"
+            fields:
+              - { label: image, name: image, widget: image }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Description, name: description, widget: markdown }
+          - {
+              label: Third Sliter Title,
+              name: thirdSliderTitle,
+              widget: string,
+            }
+          - label: "Third Slider"
+            name: "thirdSlider"
+            widget: "object"
+            fields:
+              - { label: image, name: image, widget: image }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Description, name: description, widget: markdown }
       - label: "Home"
         name: "Home"
         file: "content/home.md"
