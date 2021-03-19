@@ -1,5 +1,6 @@
 ---
-logo: /img/logo-4.svg
+templateKey: header
+logo: /img/logo-4.png
 menu:
   - name: About
     url: /about
