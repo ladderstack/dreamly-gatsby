@@ -67,25 +67,6 @@ const ServiceSlider = ({ sliderData }) => {
                 </div>
               )
             })}
-            {sliderData &&
-            sliderData.map((slide, index) => {
-              return (
-                <div className="slider-item-wrap" key={index}>
-                  <div className="service-slider-item">
-                    <div className="service-item-img">
-                      <Img
-                        fluid={slide.image.childImageSharp.fluid}
-                        alt="Iamge"
-                      />
-                    </div>
-                    <div className="service-item-info">
-                      <h2>{slide.heading}</h2>
-                      <p>{slide.description}</p>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
         </Slider>
       </div>
       <div className="service-slider-right">
@@ -96,19 +77,6 @@ const ServiceSlider = ({ sliderData }) => {
           {...sliderTwoSetting}
         >
           {sliderData &&
-            sliderData.map((slide, index) => {
-              return (
-                <div className="slider-item" key={index}>
-                  <Img
-                    fluid={slide.image.childImageSharp.fluid}
-                    alt="Image"
-                    className="image-slide"
-                  />
-                  <p>{slide.heading}</p>
-                </div>
-              )
-            })}
-            {sliderData &&
             sliderData.map((slide, index) => {
               return (
                 <div className="slider-item" key={index}>
