@@ -101,6 +101,12 @@ collections:
         name: "about"
         file: "content/about.md"
         fields:
+            - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about",
+            }
           - { label: Vision, name: vision, widget: string }
           - {
               label: Vision Description,
@@ -178,6 +184,12 @@ collections:
         name: "Recruitment"
         file: "content/recruitment.json"
         fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "recruitment",
+            }
           - { label: Title, name: title, widget: string }
           - label: "Sub Heading"
             name: "subheading"
@@ -201,8 +213,14 @@ collections:
           - { label: Job Link, name: joblink, widget: string }
       - label: "Home"
         name: "Home"
-        file: "content/home.json"
+        file: "content/home.md"
         fields:
+            - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "home",
+            }
           - { label: Title, name: title, widget: string }
           - label: "Hero Image"
             name: "heroimage"

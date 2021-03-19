@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import upload from "../../static/img/upload.png"
+import Img from "gatsby-image"
 
 const Individual = ({ data }) => {
   console.log(data)
@@ -11,7 +12,13 @@ const Individual = ({ data }) => {
       <div className="content-wrap">
         <div className="member-details-wrap">
           <div className="member-info-wrap">
-            <img src={markdownRemark.frontmatter.profile_pic} alt="Image" />
+            <Img
+              fluid={
+                markdownRemark.frontmatter.profile_pic.childImageSharp.fluid
+              }
+              alt=""
+              className="profile_pic"
+            />
             <div className="member-info">
               <span>{markdownRemark.frontmatter.job_title}</span>
               <p>{markdownRemark.frontmatter.jap_name}</p>
@@ -117,11 +124,23 @@ export const pageQuery = graphql`
       html
       frontmatter {
         job_title
-        profile_pic
+        profile_pic {
+          childImageSharp {
+            fluid(quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         skills
         title
         jap_name
-        smallImage
+        smallImage {
+          childImageSharp {
+            fluid(maxWidth: 564, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         SNS {
           facebook
           github

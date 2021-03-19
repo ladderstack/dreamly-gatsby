@@ -1173,11 +1173,13 @@ a:hover {
   margin: 0 0 50px;
 }
 
-.team-member img {
-  width: 250px;
-  max-height: 250px;
-  border-radius: 50%;
-  margin: 0 0 30px;
+.team-member {
+  .profile-pic {
+    width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    margin: 0 0 30px;
+  }
 }
 
 .team-member p {
@@ -1556,10 +1558,12 @@ a:hover {
   padding: 60px 0 0;
 }
 
-.member-info-wrap img {
-  width: 50%;
-  height: 367px;
-  object-fit: cover;
+.member-info-wrap {
+  .profile_pic {
+    width: 50%;
+    height: 367px;
+    object-fit: cover;
+  }
 }
 .member-info {
   width: 47%;
@@ -2001,10 +2005,12 @@ a:hover {
     max-width: 280px;
   }
 
-  .member-info-wrap img {
-    width: 100%;
-    margin: 0 0 30px;
-    height: auto;
+  .member-info-wrap {
+    .profile_pic {
+      width: 100%;
+      margin: 0 0 30px;
+      height: auto;
+    }
   }
 
   .member-info {
@@ -2597,10 +2603,12 @@ a:hover {
     top: 44%;
   }
 
-  .team-member img {
-    width: 200px;
-    max-height: 200px;
-    border-radius: 50%;
+  .team-member {
+    .profile-pic {
+      width: 200px;
+      max-height: 200px;
+      border-radius: 50%;
+    }
   }
 
   .quality-item,
@@ -3097,9 +3105,11 @@ a:hover {
     width: 48%;
   }
 
-  .team-member img {
-    width: 150px;
-    max-height: 150px;
+  .team-member {
+    .profile-pic {
+      width: 150px;
+      max-height: 150px;
+    }
   }
 
   .section-title.v4 img {
