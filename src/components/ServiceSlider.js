@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"
 import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+// import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick-theme.css"
 import Img from "gatsby-image"
 
 const ServiceSlider = ({ sliderData }) => {
@@ -20,15 +20,14 @@ const ServiceSlider = ({ sliderData }) => {
     slidesToScroll: 1,
     arrows: false,
     fade: true,
+    dots: true,
   }
 
   const sliderTwoSetting = {
     slidesToShow: 4,
     slidesToScroll: 1,
-    dots: true,
     draggable: true,
-    centerMode: true,
-    isFinite: true,
+    infinite: true,
     focusOnSelect: true,
     // responsive: [
     //   {
@@ -68,6 +67,25 @@ const ServiceSlider = ({ sliderData }) => {
                 </div>
               )
             })}
+            {sliderData &&
+            sliderData.map((slide, index) => {
+              return (
+                <div className="slider-item-wrap" key={index}>
+                  <div className="service-slider-item">
+                    <div className="service-item-img">
+                      <Img
+                        fluid={slide.image.childImageSharp.fluid}
+                        alt="Iamge"
+                      />
+                    </div>
+                    <div className="service-item-info">
+                      <h2>{slide.heading}</h2>
+                      <p>{slide.description}</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
         </Slider>
       </div>
       <div className="service-slider-right">
@@ -78,6 +96,19 @@ const ServiceSlider = ({ sliderData }) => {
           {...sliderTwoSetting}
         >
           {sliderData &&
+            sliderData.map((slide, index) => {
+              return (
+                <div className="slider-item" key={index}>
+                  <Img
+                    fluid={slide.image.childImageSharp.fluid}
+                    alt="Image"
+                    className="image-slide"
+                  />
+                  <p>{slide.heading}</p>
+                </div>
+              )
+            })}
+            {sliderData &&
             sliderData.map((slide, index) => {
               return (
                 <div className="slider-item" key={index}>
