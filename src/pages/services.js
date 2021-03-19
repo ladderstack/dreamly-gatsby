@@ -1,10 +1,10 @@
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import React, { useState, useRef } from "react"
-import Slider from "react-slick"
+import React from "react"
 import ServiceSlider from "../components/ServiceSlider"
+import { StaticImage } from "gatsby-plugin-image"
+import MobileServiceSlider from "../components/MobileServiceSlider"
 
 const Services = ({ data }) => {
   console.log(data)
@@ -20,7 +20,11 @@ const Services = ({ data }) => {
                   <div class="about-text v2 text-center style1">
                     <h2>
                       <span>
-                        <img src="assets/img/parabola-3.svg" alt="Image" />
+                        <StaticImage
+                          src="../../static/img/parabola-3.svg"
+                          alt="Image"
+                          className="orange-d"
+                        />
                         What
                       </span>
                       We do
@@ -35,11 +39,45 @@ const Services = ({ data }) => {
         <section class="service-wrap">
           <div class="service-title">
             <h2>
-              <span>#1</span>地方・行政のデジタル化に向けた自社プロダクト開発
+              <span>#1</span>
+              {data.markdownRemark.frontmatter.firstSliderTitle}
             </h2>
           </div>
 
           <ServiceSlider
+            sliderData={data.markdownRemark.frontmatter.firstSlider}
+          />
+          <MobileServiceSlider
+            sliderData={data.markdownRemark.frontmatter.firstSlider}
+          />
+        </section>
+        <section class="service-wrap">
+          <div class="service-title">
+            <h2>
+              <span>#2</span>
+              {data.markdownRemark.frontmatter.secondSliderTitle}
+            </h2>
+          </div>
+
+          <ServiceSlider
+            sliderData={data.markdownRemark.frontmatter.secondSlider}
+          />
+          <MobileServiceSlider
+            sliderData={data.markdownRemark.frontmatter.secondSlider}
+          />
+        </section>
+        <section class="service-wrap">
+          <div class="service-title">
+            <h2>
+              <span>#3</span>
+              {data.markdownRemark.frontmatter.thirdSliderTitle}
+            </h2>
+          </div>
+
+          <ServiceSlider
+            sliderData={data.markdownRemark.frontmatter.firstSlider}
+          />
+          <MobileServiceSlider
             sliderData={data.markdownRemark.frontmatter.firstSlider}
           />
         </section>

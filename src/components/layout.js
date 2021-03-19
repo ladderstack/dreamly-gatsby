@@ -8,7 +8,7 @@ import BackToTop from "./BackToTop"
 const Layout = ({ location, title, children }) => {
   return (
     <div className="global-wrapper">
-      <div class="page_wrapper">
+      <div className="page_wrapper">
         <Header />
         <main>{children}</main>
         <Footer />

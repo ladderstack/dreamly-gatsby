@@ -3,10 +3,9 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HomeSlider from "../components/HomeSlider"
-import parabola from "../../static/img/parabola-2.svg"
-import parabola3 from "../../static/img/parabola-3.svg"
 import upload from "../../static/img/upload.png"
 import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 const BlogIndex = props => {
   console.log(props)
@@ -41,7 +40,10 @@ const BlogIndex = props => {
                     <div className="about-text v1">
                       <h2>
                         <span>
-                          <img src={parabola} alt="Image" />
+                          <StaticImage
+                            src={"../../static/img/parabola-2.svg"}
+                            alt="Image"
+                          />
                           About
                         </span>
                         Dreamly
@@ -84,7 +86,11 @@ const BlogIndex = props => {
                     <div className="about-text v2">
                       <h2>
                         <span>
-                          <img src={parabola3} alt="Image" />
+                          <StaticImage
+                            src="../../static/img/parabola-3.svg"
+                            alt="Image"
+                            className="orange-d"
+                          />
                           What
                         </span>
                         We do
@@ -131,7 +137,7 @@ const BlogIndex = props => {
               <div className="news-item-wrap">
                 {props.data.allMarkdownRemark.nodes.map((press, index) => {
                   return (
-                    <a className="news-item" href="#">
+                    <a className="news-item" href="#" key={index}>
                       <span className="date">{press.frontmatter.date}</span>
                       <p>{press.frontmatter.title}</p>
                     </a>

@@ -3,9 +3,9 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import upload from "../../static/img/upload.png"
 import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Individual = ({ data }) => {
-  console.log(data)
   const { markdownRemark } = data
   return (
     <Layout>
@@ -42,22 +42,46 @@ const Individual = ({ data }) => {
               <ul className="social_profile">
                 <span>SNS</span>
                 <li>
-                  <a className="twitter" href="#">
+                  <a
+                    className="twitter"
+                    href={
+                      markdownRemark.frontmatter.SNS &&
+                      markdownRemark.frontmatter.SNS.twitter
+                    }
+                  >
                     <i className="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a className="fb" href="#">
+                  <a
+                    className="fb"
+                    href={
+                      markdownRemark.frontmatter.SNS &&
+                      markdownRemark.frontmatter.SNS.facebook
+                    }
+                  >
                     <i className="fab fa-facebook"></i>
                   </a>
                 </li>
                 <li>
-                  <a className="github" href="#">
+                  <a
+                    className="github"
+                    href={
+                      markdownRemark.frontmatter.SNS &&
+                      markdownRemark.frontmatter.SNS.github
+                    }
+                  >
                     <i className="fab fa-github"></i>
                   </a>
                 </li>
                 <li>
-                  <a className="linkedin" href="#">
+                  <a
+                    className="linkedin"
+                    href={
+                      markdownRemark.frontmatter.SNS &&
+                      markdownRemark.frontmatter.SNS.linkedin
+                    }
+                  >
                     <i className="fab fa-linkedin"></i>
                   </a>
                 </li>
@@ -76,9 +100,9 @@ const Individual = ({ data }) => {
                 </div>
                 <div className="col-lg-4 offset-lg-2 lg-none">
                   <div className="member-more-btn">
-                    <img
+                    <StaticImage
                       className="mb-2"
-                      src="assets/img/logo-5.png"
+                      src="../../static/img/logo-5.png"
                       alt="Image"
                     />
                     <a href="#" className="btn v4">

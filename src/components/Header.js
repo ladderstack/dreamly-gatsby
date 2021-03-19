@@ -1,10 +1,9 @@
 import { graphql, Link, StaticQuery } from "gatsby"
-import React, { useEffect } from "react"
-import headerData from "../../content/header.json"
+import React, { useState } from "react"
 import Img from "gatsby-image"
 
 const Header = () => {
-  useEffect(() => {}, [])
+  const [toggleMenu, setToggleMenu] = useState(false)
   return (
     <StaticQuery
       query={graphql`
@@ -18,8 +17,8 @@ const Header = () => {
               }
               logo {
                 childImageSharp {
-                  fixed(quality: 90) {
-                    ...GatsbyImageSharpFixed
+                  fluid(maxWidth: 360, quality: 90) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -33,8 +32,8 @@ const Header = () => {
             <div className="header-left">
               <Link className="logo" to="/">
                 <Img
-                  fixed={
-                    data.markdownRemark.frontmatter.logo.childImageSharp.fixed
+                  fluid={
+                    data.markdownRemark.frontmatter.logo.childImageSharp.fluid
                   }
                   alt="Logo"
                 />
@@ -52,11 +51,27 @@ const Header = () => {
                   )
                 })}
               </ul>
-              <div className="hamburger-menu">
+              <div
+                className="hamburger-menu"
+                onClick={() => setToggleMenu(!toggleMenu)}
+              >
                 <span className="line-top"></span>
                 <span className="line-center"></span>
                 <span className="line-bottom"></span>
               </div>
+            </div>
+            <div className={`ofcavas-menu ${toggleMenu ? "current" : null}`}>
+              <ul className="navbar-nav">
+                {data.markdownRemark.frontmatter.menu.map((item, index) => {
+                  return (
+                    <li className="nav-item" key={index}>
+                      <Link className="nav-link" to={item.url}>
+                        {item.name}
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
             </div>
           </div>
         )
