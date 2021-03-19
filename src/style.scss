@@ -1297,6 +1297,9 @@ a:hover {
 
 .service-slider-left {
   width: 100%;
+  .slick-track{
+    height: 543px;
+  }
 }
 
 .service-slider-right {
@@ -1331,7 +1334,9 @@ a:hover {
   margin-left: 5%;
   margin-bottom: -70px;
 }
-
+.service-nav .slick-slide{
+  width: 244px !important
+}
 .service-nav .slick-slide .image-slide {
   max-height: 200px;
   width: 100%;
