@@ -101,7 +101,7 @@ collections:
         name: "about"
         file: "content/about.md"
         fields:
-            - {
+          - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
