@@ -229,7 +229,7 @@ collections:
             }
           - label: "First Slider"
             name: "firstSlider"
-            widget: "object"
+            widget: "list"
             fields:
               - { label: image, name: image, widget: image }
               - { label: Heading, name: heading, widget: string }
@@ -241,7 +241,7 @@ collections:
             }
           - label: "Second Slider"
             name: "secondSlider"
-            widget: "object"
+            widget: "list"
             fields:
               - { label: image, name: image, widget: image }
               - { label: Heading, name: heading, widget: string }
@@ -253,7 +253,7 @@ collections:
             }
           - label: "Third Slider"
             name: "thirdSlider"
-            widget: "object"
+            widget: "list"
             fields:
               - { label: image, name: image, widget: image }
               - { label: Heading, name: heading, widget: string }
