@@ -12,13 +12,16 @@ const Individual = ({ data }) => {
       <div className="content-wrap">
         <div className="member-details-wrap">
           <div className="member-info-wrap">
-            <Img
-              fluid={
-                markdownRemark.frontmatter.profile_pic.childImageSharp.fluid
-              }
-              alt=""
-              className="profile_pic"
-            />
+            {markdownRemark.frontmatter.profile_pic && (
+              <Img
+                fluid={
+                  markdownRemark.frontmatter.profile_pic.childImageSharp.fluid
+                }
+                alt=""
+                className="profile_pic"
+              />
+            )}
+
             <div className="member-info">
               <span>{markdownRemark.frontmatter.job_title}</span>
               <p>{markdownRemark.frontmatter.jap_name}</p>
