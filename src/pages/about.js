@@ -10,10 +10,9 @@ import data from "../../content/about.json"
 import logoMmber from "../../static/img/logo-3.png"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 const About = props => {
-  console.log(props)
-  console.log(data)
   return (
     <Layout>
       <div className="content-wrap">
@@ -25,7 +24,10 @@ const About = props => {
                   <div className="about-text v1 style1 text-center">
                     <h2>
                       <span>
-                        <img src={Parabola} alt="Image" />
+                        <StaticImage
+                          src={"../images/parabola-2.svg"}
+                          alt="Image"
+                        />
                         About
                       </span>
                       Dreamly

@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Header from "../components/Header"
 import "../style.scss"
 import Footer from "./Footer"
+import BackToTop from "./BackToTop"
 
 const Layout = ({ location, title, children }) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({ location, title, children }) => {
         <main>{children}</main>
         <Footer />
       </div>
+      <BackToTop />
     </div>
   )
 }
