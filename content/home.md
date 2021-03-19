@@ -1,4 +1,5 @@
 ---
+templateKey: home
 title: Home
 heroimage:
   image: /img/hero-bg.png

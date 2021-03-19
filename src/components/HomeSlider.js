@@ -2,6 +2,7 @@ import React from "react"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
+import Img from "gatsby-image"
 
 const HomeSlider = ({ sliderObject }) => {
   const settings = {
@@ -30,7 +31,9 @@ const HomeSlider = ({ sliderObject }) => {
           sliderObject.map((slider, index) => {
             return (
               <div className="slider-item" key={index}>
-                <img src={slider.image} alt="Image" />
+                {slider.image.childImageSharp && (
+                  <Img fluid={slider.image.childImageSharp.fluid} alt="Image" />
+                )}
                 <p>{slider.sliderTitle}</p>
               </div>
             )

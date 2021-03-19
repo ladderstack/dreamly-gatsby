@@ -7,6 +7,7 @@ import HomeSlider from "../components/HomeSlider"
 import parabola from "../../static/img/parabola-2.svg"
 import parabola3 from "../../static/img/parabola-3.svg"
 import upload from "../../static/img/upload.png"
+import Img from "gatsby-image"
 
 const BlogIndex = props => {
   console.log(props)
@@ -15,11 +16,19 @@ const BlogIndex = props => {
       <SEO title="All posts" />
 
       <div className="hero-wrap">
-        <img className="hero-img" src={data.heroimage.image} alt="Image" />
+        <Img
+          fluid={
+            props.data.markdownRemark.frontmatter.heroimage.image
+              .childImageSharp.fluid
+          }
+        />
         <div className="hero-content">
-          <h1>{data.heroimage.heading}</h1>
+          <h1>{props.data.markdownRemark.frontmatter.heroimage.heading}</h1>
           <div
-            dangerouslySetInnerHTML={{ __html: data.heroimage.description }}
+            dangerouslySetInnerHTML={{
+              __html:
+                props.data.markdownRemark.frontmatter.heroimage.description,
+            }}
           />
         </div>
       </div>
@@ -40,17 +49,30 @@ const BlogIndex = props => {
                       </h2>
                       <div
                         dangerouslySetInnerHTML={{
-                          __html: data.aboutDreamly.description,
+                          __html:
+                            props.data.markdownRemark.frontmatter.aboutDreamly
+                              .description,
                         }}
                       />
                       <div className="about-btn v1">
-                        <a href={data.aboutDreamly.moreLink} className="link">
+                        <Link
+                          to={
+                            props.data.markdownRemark.frontmatter.aboutDreamly
+                              .moreLink
+                          }
+                          className="link"
+                        >
                           More
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
-                  <HomeSlider sliderObject={data.aboutDreamly.sliderImages} />
+                  <HomeSlider
+                    sliderObject={
+                      props.data.markdownRemark.frontmatter.aboutDreamly
+                        .sliderImages
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -70,17 +92,30 @@ const BlogIndex = props => {
                       </h2>
                       <div
                         dangerouslySetInnerHTML={{
-                          __html: data.whatWeDo.description,
+                          __html:
+                            props.data.markdownRemark.frontmatter.whatWeDo
+                              .description,
                         }}
                       />
                       <div className="about-btn v1">
-                        <a href={data.whatWeDo.moreLink} className="link">
+                        <Link
+                          to={
+                            props.data.markdownRemark.frontmatter.whatWeDo
+                              .moreLink
+                          }
+                          className="link"
+                        >
                           More
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
-                  <HomeSlider sliderObject={data.whatWeDo.sliderImages} />
+                  <HomeSlider
+                    sliderObject={
+                      props.data.markdownRemark.frontmatter.whatWeDo
+                        .sliderImages
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -118,13 +153,21 @@ const BlogIndex = props => {
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
               <div className="section-title">
-                <h3>{data.doSomething.heading}</h3>
+                <h3>
+                  {props.data.markdownRemark.frontmatter.doSomething.heading}
+                </h3>
               </div>
             </div>
             <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
               <div className="promo-content">
                 <span className="d-xl-none">初めて見た人わからん？</span>
-                <img src={data.doSomething.image} alt="Image" />
+                <Img
+                  fluid={
+                    props.data.markdownRemark.frontmatter.doSomething.image
+                      .childImageSharp.fluid
+                  }
+                  alt="Image"
+                />
               </div>
             </div>
             <div className="col-lg-12 text-center">
@@ -151,6 +194,61 @@ export const homeQuery = graphql`
         frontmatter {
           title
           date(formatString: "YYYY-MM-DD")
+        }
+      }
+    }
+    markdownRemark(frontmatter: { templateKey: { eq: "home" } }) {
+      frontmatter {
+        title
+        templateKey
+        heroimage {
+          heading
+          description
+          image {
+            childImageSharp {
+              fluid(quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        whatWeDo {
+          description
+          sliderImages {
+            sliderTitle
+            image {
+              childImageSharp {
+                fluid(quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+        doSomething {
+          heading
+          link
+          image {
+            childImageSharp {
+              fluid(quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        aboutDreamly {
+          description
+          moreLink
+          sliderImages {
+            sliderTitle
+            image {
+              childImageSharp {
+                fluid(quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }
