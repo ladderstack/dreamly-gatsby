@@ -1,4 +1,5 @@
 ---
+templateKey: service
 title: Services
 firstSliderTitle: 地方・行政のデジタル化に向けた自社プロダクト開発
 firstSlider:
