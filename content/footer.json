@@ -1,32 +1,32 @@
 {
   "logo": "/img/logo.svg",
-  "copy": "<a href=\"#\">利用規約／免責事項</a>\n                <a href=\"#\">プライバシーポリシー</a>\n                <p>©Dreamly Inc. All Rights Reserved.</p>",
+  "copy": "<a href=\"#\">利用規約／免責事項</a>\n<a href=\"https://www.iubenda.com/privacy-policy/13396997\">プライバシーポリシー</a>\n<p>©Dreamly Inc. All Rights Reserved.</p>",
   "aboutMenu": [
     {
-      "name": "Vision",
-      "url": "#"
+      "name": "VISION",
+      "url": "/about/#vision"
     },
     {
-      "name": "Mission",
-      "url": "#"
+      "name": "MISSION",
+      "url": "/about/#mission"
     },
     {
-      "name": "CEO Message",
-      "url": "#"
+      "name": "CEO MESSAGE",
+      "url": "/about/#message"
     },
     {
-      "name": "Member",
-      "url": "#"
+      "name": "MEMBER",
+      "url": "/about/#members"
     },
     {
       "name": "会社概要",
-      "url": "#"
+      "url": "/about/#outline"
     }
   ],
   "serviceMenu": [
     {
-      "name": "What we do",
-      "url": "#"
+      "name": "WHAT WE DO",
+      "url": "/services/#what"
     }
   ],
   "recruitmentMenu": [
@@ -35,12 +35,12 @@
       "url": "#"
     },
     {
-      "name": "Dreamy’s 5 LIKE!",
-      "url": "#"
+      "name": "Dreamly’s 5 LIKE!",
+      "url": "/recruitment/#fives"
     },
     {
       "name": "JOBS",
-      "url": "#"
+      "url": "/recruitment/#jobs"
     }
   ]
 }
