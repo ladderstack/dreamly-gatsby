@@ -41,5 +41,5 @@ whatWeDo:
 doSomething:
   heading: 一緒に何か面白いことしませんか？
   image: /img/img-10.png
-  link: "#"
+  link: mailto:info@dreamly.se
 ---
