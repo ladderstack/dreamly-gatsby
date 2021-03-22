@@ -7,10 +7,10 @@ profile-pic: https://romantic-benz-fc4317.netlify.app/static/8d77a6e5c2f65422973
 skills: マルチリンガル, マルチリンガル, マルチリンガル, マルチリンガル
 smallImage: /img/★dsc_1542.jpg
 SNS:
-  facebook: https://www.facebook.com/larslarsson87
-  twitter: https://twitter.com/lalarsson87
-  github: https://github.com/lalarsson
-  linkedin: https://www.linkedin.com/in/larssonlars/
+  facebook: "#"
+  twitter: "#"
+  github: https://github.com/faafa99
+  linkedin: https://www.linkedin.com/in/kazuro-matsubara-b7167a196/
 ---
 <h3>
  <span class="xl-none">手書き</span> Try,Fail,Iterate.
