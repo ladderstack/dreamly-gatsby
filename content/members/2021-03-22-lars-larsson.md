@@ -5,7 +5,7 @@ job-title: Executive Assistant
 jap-name: 松原かずろ
 profile-pic: https://romantic-benz-fc4317.netlify.app/static/8d77a6e5c2f654229732abe06bfa956d/c7cc7/avavtar-2.png
 skills: マルチリンガル, マルチリンガル, マルチリンガル, マルチリンガル
-smallImage: https://romantic-benz-fc4317.netlify.app/static/fa4778d2f970a90d4a7774695a3d1785/ae1da/member-1.png
+smallImage: /img/★dsc_1542.jpg
 SNS:
   facebook: https://www.facebook.com/larslarsson87
   twitter: https://twitter.com/lalarsson87
