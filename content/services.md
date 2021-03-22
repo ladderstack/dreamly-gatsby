@@ -1,7 +1,7 @@
 ---
 templateKey: service
 title: Services
-firstSliderTitle: 地方・行政のデジタル化に向けた自社プロダクト開発
+firstSliderTitle: 地方のデジタル化に向けた自社プロダクト開発
 firstSlider:
   - image: /img/imf-20.jpg
     heading: Eir（エイル）
@@ -45,7 +45,7 @@ secondSlider:
     description: |-
       市民参加型の行政プラットフォームを作成しています。
                               自動化が進んでいる北欧式を日本にも取り入れていきたいです。
-thirdSliderTitle: 地方・行政のデジタル化に向けた自社プロダクト開発
+thirdSliderTitle: 地方のデジタル化に向けた自社プロダクト開発
 thirdSlider:
   - image: /img/imf-20.jpg
     heading: Eir
