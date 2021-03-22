@@ -2,11 +2,11 @@
 templateKey: header
 logo: /img/logo-4.png
 menu:
-  - name: About
+  - name: ABOUT
     url: /about
-  - name: Service
+  - name: SERVICE
     url: /services
-  - name: Press
+  - name: PRESS
     url: /press
   - name: RECRUITMENT
     url: /recruitment
