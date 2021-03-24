@@ -23,8 +23,8 @@ const Individual = ({ data }) => {
             )}
 
             <div className="member-info">
-              <span>{markdownRemark.frontmatter.job_title}</span>
-              <p>{markdownRemark.frontmatter.jap_name}</p>
+              <span>{markdownRemark.frontmatter.jobTitle}</span>
+              <p>{markdownRemark.frontmatter.japName}</p>
               <h3>{markdownRemark.frontmatter.title}</h3>
 
               <ul className="taglist">
