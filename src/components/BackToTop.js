@@ -1,10 +1,20 @@
 import React from "react"
+import FadeIn from "react-fade-in"
+import { useScroll } from "../hooks/useScroll"
 
 const BackToTop = () => {
+  const { scrollY } = useScroll()
+
   return (
-    <a href="#" className="back-to-top">
-      <span>Scroll to top</span>
-    </a>
+    <>
+      {scrollY > 550 && (
+        <FadeIn>
+          <a href="#" className="back-to-top">
+            <span>Scroll to top</span>
+          </a>
+        </FadeIn>
+      )}
+    </>
   )
 }
 

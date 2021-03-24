@@ -291,8 +291,8 @@ export const aboutQuery = graphql`
           slug
         }
         frontmatter {
-          job_title
-          profile_pic {
+          jobTitle
+          profilePic {
             childImageSharp {
               fluid(maxWidth: 564, quality: 90) {
                 ...GatsbyImageSharpFluid
@@ -301,7 +301,7 @@ export const aboutQuery = graphql`
           }
           skills
           title
-          jap_name
+          japName
           smallImage {
             childImageSharp {
               fluid(maxWidth: 564, quality: 90) {

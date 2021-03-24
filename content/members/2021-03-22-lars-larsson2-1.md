@@ -1,9 +1,9 @@
 ---
 templateKey: members
 title: Genki Ueno
-job-title: Flutter Engineer
-jap-name: 上野げんき
-profile-pic: https://romantic-benz-fc4317.netlify.app/static/8d77a6e5c2f654229732abe06bfa956d/c7cc7/avavtar-2.png
+jobTitle: CEO
+japName: ラーション・ラーシュ
+profilePic: /img/avavtar-2.png
 skills: マルチリンガル, マルチリンガル, マルチリンガル, マルチリンガル
 smallImage: /img/★dsc_1550.jpg
 SNS:
@@ -12,6 +12,7 @@ SNS:
   github: https://github.com/ogen3
   linkedin: https://www.linkedin.com/in/genki-ueno-7b07791b1/
 ---
+
 <h3>
  <span class="xl-none">手書き</span> Try,Fail,Iterate.
 </h3>

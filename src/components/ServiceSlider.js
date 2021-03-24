@@ -24,8 +24,10 @@ const ServiceSlider = ({ sliderData }) => {
   }
 
   const sliderTwoSetting = {
+    dots: false,
     slidesToShow: 4,
     slidesToScroll: 1,
+    centerMode: false,
     draggable: true,
     infinite: true,
     focusOnSelect: true,

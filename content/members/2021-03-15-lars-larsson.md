@@ -1,9 +1,9 @@
 ---
 templateKey: members
 title: Lars Larsson
-job-title: CEO
-jap-name: ラーション・ラーシュ
-profile-pic: static/img/avavtar-2.png
+jobTitle: CEO
+japName: ラーション・ラーシュ
+profilePic: /img/avavtar-2.png
 skills: マルチリンガル, マルチリンガル, マルチリンガル, マルチリンガル
 smallImage: /img/★dsc_1526.jpg
 SNS:
@@ -12,6 +12,7 @@ SNS:
   github: https://github.com/lalarsson
   linkedin: https://www.linkedin.com/in/larssonlars/
 ---
+
 <h3>
  <span class="xl-none">手書き</span> Try,Fail,Iterate.
 </h3>

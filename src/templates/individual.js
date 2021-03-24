@@ -12,10 +12,10 @@ const Individual = ({ data }) => {
       <div className="content-wrap">
         <div className="member-details-wrap">
           <div className="member-info-wrap">
-            {markdownRemark.frontmatter.profile_pic && (
+            {markdownRemark.frontmatter.profilePic && (
               <Img
                 fluid={
-                  markdownRemark.frontmatter.profile_pic.childImageSharp.fluid
+                  markdownRemark.frontmatter.profilePic.childImageSharp.fluid
                 }
                 alt=""
                 className="profile_pic"
@@ -150,8 +150,8 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       frontmatter {
-        job_title
-        profile_pic {
+        jobTitle
+        profilePic {
           childImageSharp {
             fluid(quality: 90) {
               ...GatsbyImageSharpFluid
@@ -160,7 +160,7 @@ export const pageQuery = graphql`
         }
         skills
         title
-        jap_name
+        japName
         smallImage {
           childImageSharp {
             fluid(maxWidth: 564, quality: 90) {
