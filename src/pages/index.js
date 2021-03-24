@@ -176,7 +176,10 @@ const BlogIndex = props => {
               </div>
             </div>
             <div className="col-lg-12 text-center">
-              <a href="#" className="btn v1">
+              <a
+                href={props.data.markdownRemark.frontmatter.doSomething.link}
+                className="btn v1"
+              >
                 問い合わせはコチラから
                 <img src={upload} alt="Image" />
               </a>
@@ -235,7 +238,7 @@ export const homeQuery = graphql`
           link
           image {
             childImageSharp {
-              fluid(quality: 90) {
+              fluid(quality: 90, maxWidth: 250) {
                 ...GatsbyImageSharpFluid
               }
             }

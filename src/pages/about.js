@@ -86,7 +86,6 @@ const About = props => {
             </div>
           </div>
           <div className="ceo-msg-wrap">
-            <img src={CeoMessage} alt="Image" className="shape-three" />
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-lg-10 col-xl-8">

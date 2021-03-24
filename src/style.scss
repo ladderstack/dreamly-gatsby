@@ -538,6 +538,9 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  .header-left {
+    width: 40%;
+  }
 }
 
 .logo .gatsby-image-wrapper {
@@ -692,6 +695,11 @@ a:hover {
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
+
+  div {
+    width: 520px;
+    margin: auto;
+  }
 }
 
 .hero-content h1 {
@@ -971,6 +979,9 @@ a:hover {
   margin: 30px auto 80px;
   display: block;
 }
+.promo-content span {
+  display: none;
+}
 
 /*---------------------------------
         News CSS
@@ -1166,30 +1177,20 @@ a:hover {
 
 .team-item-wrap {
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .team-member {
   width: 30%;
   text-align: center;
-  margin: 0px 0 328px;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 32%;
-  -ms-flex: 0 0 32%;
-  flex: 0 0 32%;
-  max-width: 33.333333%;
-  height: 30px;
-}
-
-.team-member:nth-child(3n + 2) {
-  margin: 0 2%;
+  margin: 0 0 50px;
 }
 
 .team-member {
   .profile-pic {
-    width: 230px;
-    max-height: 230px;
+    width: 250px;
+    max-height: 250px;
     border-radius: 50%;
     margin: 0 0 30px;
   }
@@ -2443,6 +2444,7 @@ a:hover {
   }
 
   .promo-content span {
+    display: none;
     position: absolute;
     top: 13px;
     right: -47%;
@@ -2524,7 +2526,8 @@ a:hover {
   }
 
   .about-text.v1 h2 span .gatsby-image-wrapper {
-    max-width: 227px;
+    max-width: 145px;
+    left: 2px;
   }
 
   .about-text.v2 h2 span .orange-d {
@@ -2623,8 +2626,8 @@ a:hover {
 
   .team-member {
     .profile-pic {
-      width: 200px;
-      max-height: 200px;
+      width: 170px;
+      max-height: 170px;
       border-radius: 50%;
     }
   }
@@ -2931,6 +2934,9 @@ a:hover {
 
   .hero-content {
     max-width: 80%;
+    div {
+      width: 100%;
+    }
   }
 
   .hero-content h1 {
@@ -3125,8 +3131,8 @@ a:hover {
 
   .team-member {
     .profile-pic {
-      width: 150px;
-      max-height: 150px;
+      width: 140px;
+      max-height: 140px;
     }
   }
 
@@ -3310,10 +3316,15 @@ a:hover {
     right: 8%;
   }
 
-  .about-text.v1 h2 span .gatsby-image-wrapper,
+  .about-text.v1 h2 span .gatsby-image-wrapper {
+    top: 50%;
+    left: 6px;
+    max-width: 184px;
+  }
+
   .about-text.v2 h2 span .orange-d {
     top: 50%;
-    left: -10px;
+    left: -11px;
     max-width: 184px;
   }
 

@@ -17,7 +17,7 @@ const Header = () => {
               }
               logo {
                 childImageSharp {
-                  fluid(maxWidth: 360, quality: 90) {
+                  fluid(quality: 90) {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -30,14 +30,16 @@ const Header = () => {
         return (
           <div className="header-bar-area">
             <div className="header-left">
-              <Link className="logo" to="/">
-                <Img
-                  fluid={
-                    data.markdownRemark.frontmatter.logo.childImageSharp.fluid
-                  }
-                  alt="Logo"
-                />
-              </Link>
+              <div style={{ width: "100%" }}>
+                <Link className="logo" to="/">
+                  <Img
+                    fluid={
+                      data.markdownRemark.frontmatter.logo.childImageSharp.fluid
+                    }
+                    alt="Logo"
+                  />
+                </Link>
+              </div>
             </div>
             <div className="header-right">
               <ul className="main-menu">
