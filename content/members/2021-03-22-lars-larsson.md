@@ -1,7 +1,7 @@
 ---
 templateKey: members
 title: Kazuro Matsubara
-jobTitle: CEO
+jobTitle: Product Manager
 japName: ラーション・ラーシュ
 profilePic: /img/avavtar-2.png
 skills: マルチリンガル, マルチリンガル, マルチリンガル, マルチリンガル
