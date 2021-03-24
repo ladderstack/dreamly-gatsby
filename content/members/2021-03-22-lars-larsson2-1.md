@@ -1,7 +1,7 @@
 ---
 templateKey: members
 title: Genki Ueno
-jobTitle: CEO
+jobTitle: Software Engineer
 japName: ラーション・ラーシュ
 profilePic: /img/avavtar-2.png
 skills: マルチリンガル, マルチリンガル, マルチリンガル, マルチリンガル
