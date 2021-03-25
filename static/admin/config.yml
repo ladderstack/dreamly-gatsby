@@ -105,7 +105,7 @@ collections:
     files:
       - label: "About Page"
         name: "about"
-        file: "content/about.md"
+        file: "content/about.json"
         fields:
           - {
               label: "Template Key",
