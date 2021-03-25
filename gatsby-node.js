@@ -18,6 +18,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         ) {
           nodes {
             id
+            frontmatter {
+              title
+              templateKey
+            }
             fields {
               slug
             }
@@ -46,15 +50,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
-      createPage({
-        path: post.fields.slug,
-        component: blogPost,
-        context: {
-          id: post.id,
-          previousPostId,
-          nextPostId,
-        },
-      })
+      if (post.frontmatter.templateKey === "members") {
+        createPage({
+          path: `members/${post.frontmatter.title}/card`,
+          component: blogPost,
+          context: {
+            id: post.id,
+            previousPostId,
+            nextPostId,
+          },
+        })
+      } else {
+        createPage({
+          path: post.fields.slug,
+          component: blogPost,
+          context: {
+            id: post.id,
+            previousPostId,
+            nextPostId,
+          },
+        })
+      }
     })
   }
 }
