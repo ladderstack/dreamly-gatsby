@@ -19,28 +19,30 @@ const Press = ({ data }) => {
                 <div className="section-title v1">
                   <h2>Press</h2>
                 </div>
-                {Object.keys(dataByYear).map((year, index) => {
-                  return (
-                    <div className="news-item-wrap" index={index}>
-                      <h4 className="news-date">
-                        <img src={NewsImage} alt="Image" />
-                        {year}
-                      </h4>
-                      {dataByYear[`${year}`].map((yearValue, index) => {
-                        return (
-                          <a className="news-item" href="" key={index}>
-                            <span className="date">
-                              {moment(yearValue.frontmatter.date).format(
-                                "YYYY.MM.DD"
-                              )}{" "}
-                            </span>
-                            <p>{yearValue.frontmatter.title}</p>
-                          </a>
-                        )
-                      })}
-                    </div>
-                  )
-                })}
+                {Object.keys(dataByYear)
+                  .reverse()
+                  .map((year, index) => {
+                    return (
+                      <div className="news-item-wrap" index={index}>
+                        <h4 className="news-date">
+                          <img src={NewsImage} alt="Image" />
+                          {year}
+                        </h4>
+                        {dataByYear[`${year}`].map((yearValue, index) => {
+                          return (
+                            <a className="news-item" href="" key={index}>
+                              <span className="date">
+                                {moment(yearValue.frontmatter.date).format(
+                                  "YYYY.MM.DD"
+                                )}{" "}
+                              </span>
+                              <p>{yearValue.frontmatter.title}</p>
+                            </a>
+                          )
+                        })}
+                      </div>
+                    )
+                  })}
               </div>
             </div>
           </div>
