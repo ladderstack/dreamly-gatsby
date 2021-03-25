@@ -1,9 +1,11 @@
 import { graphql, Link, StaticQuery } from "gatsby"
 import React, { useState } from "react"
 import Img from "gatsby-image"
+import { useScroll } from "../hooks/useScroll"
 
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
+  const { scrollY } = useScroll()
   return (
     <StaticQuery
       query={graphql`
@@ -28,7 +30,7 @@ const Header = () => {
       `}
       render={data => {
         return (
-          <div className="header-bar-area">
+          <div className={`header-bar-area ${scrollY > 400 ? "sticky" : null}`}>
             <div className="header-left">
               <div style={{ width: "100%" }}>
                 <Link className="logo" to="/">
