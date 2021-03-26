@@ -166,10 +166,10 @@ const BlogIndex = props => {
             <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
               <div className="promo-content">
                 <span className="d-xl-none">初めて見た人わからん？</span>
-                <Img
-                  fluid={
+                <img
+                  src={
                     props.data.markdownRemark.frontmatter.doSomething.image
-                      .childImageSharp.fluid
+                      .childImageSharp.fixed.src
                   }
                   alt="Image"
                 />
@@ -238,8 +238,8 @@ export const homeQuery = graphql`
           link
           image {
             childImageSharp {
-              fluid(quality: 90, maxWidth: 250) {
-                ...GatsbyImageSharpFluid
+              fixed(quality: 90, width: 631, height: 486) {
+                ...GatsbyImageSharpFixed
               }
             }
           }

@@ -9,9 +9,7 @@ const HomeSlider = ({ sliderObject }) => {
     dots: true,
     infinite: true,
     arrows: false,
-    autoplay: true,
     speed: 1000,
-    fade: true,
     responsive: [
       {
         breakpoint: 767,

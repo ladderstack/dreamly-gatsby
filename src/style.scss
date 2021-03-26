@@ -3561,3 +3561,14 @@ a:hover {
     display: none !important;
   }
 }
+
+.about-wrap {
+  .slick-next:before {
+    content: "\f3d1";
+    font-family: "Ionicons";
+  }
+  .slick-prev:before {
+    content: "\f3cf";
+    font-family: "Ionicons";
+  }
+}
