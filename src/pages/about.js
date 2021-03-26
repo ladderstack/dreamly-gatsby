@@ -114,7 +114,7 @@ const About = props => {
                   {props.data.allMarkdownRemark.nodes.map((member, index) => {
                     return (
                       <Link
-                        to={member.fields.slug}
+                        to={`/members/${member.frontmatter.title}/card`}
                         key={index}
                         className="team-member"
                       >
