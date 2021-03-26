@@ -119,10 +119,10 @@ const About = props => {
                         className="team-member"
                       >
                         <div>
-                          <Img
-                            fluid={
+                          <img
+                            src={
                               member.frontmatter.smallImage.childImageSharp
-                                .fluid
+                                .fixed.src
                             }
                             className="profile-pic"
                           />
@@ -303,8 +303,8 @@ export const aboutQuery = graphql`
           japName
           smallImage {
             childImageSharp {
-              fluid(maxWidth: 564, quality: 90) {
-                ...GatsbyImageSharpFluid
+              fixed(quality: 90, width: 250, height: 250) {
+                ...GatsbyImageSharpFixed
               }
             }
           }

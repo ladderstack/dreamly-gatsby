@@ -30,38 +30,49 @@ const Header = () => {
       `}
       render={data => {
         return (
-          <div className={`header-bar-area ${scrollY > 400 ? "sticky" : null}`}>
-            <div className="header-left">
-              <div style={{ width: "100%" }}>
-                <Link className="logo" to="/">
-                  <Img
-                    fluid={
-                      data.markdownRemark.frontmatter.logo.childImageSharp.fluid
-                    }
-                    alt="Logo"
-                  />
-                </Link>
+          <>
+            <div
+              className={`header-bar-area ${scrollY > 400 ? "sticky" : null}`}
+            >
+              <div className="header-left">
+                <div style={{ width: "100%" }}>
+                  <Link className="logo" to="/">
+                    <Img
+                      fluid={
+                        data.markdownRemark.frontmatter.logo.childImageSharp
+                          .fluid
+                      }
+                      alt="Logo"
+                    />
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div className="header-right">
-              <ul className="main-menu">
-                {data.markdownRemark.frontmatter.menu.map((item, index) => {
-                  return (
-                    <li className="nav-item" key={index}>
-                      <Link className="nav-link" to={item.url}>
-                        {item.name}
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-              <div
-                className="hamburger-menu"
-                onClick={() => setToggleMenu(!toggleMenu)}
-              >
-                <span className="line-top"></span>
-                <span className="line-center"></span>
-                <span className="line-bottom"></span>
+              <div className="header-right">
+                <ul className="main-menu">
+                  {data.markdownRemark.frontmatter.menu.map((item, index) => {
+                    return (
+                      <li className="nav-item" key={index}>
+                        <Link className="nav-link" to={item.url}>
+                          {item.name}
+                        </Link>
+                      </li>
+                    )
+                  })}
+                </ul>
+                <div
+                  className="hamburger-menu"
+                  onClick={() => setToggleMenu(!toggleMenu)}
+                >
+                  <span
+                    className={`line-top ${toggleMenu ? "current" : null}`}
+                  ></span>
+                  <span
+                    className={`line-center ${toggleMenu ? "current" : null}`}
+                  ></span>
+                  <span
+                    className={`line-bottom ${toggleMenu ? "current" : null}`}
+                  ></span>
+                </div>
               </div>
             </div>
             <div className={`ofcavas-menu ${toggleMenu ? "current" : null}`}>
@@ -77,7 +88,7 @@ const Header = () => {
                 })}
               </ul>
             </div>
-          </div>
+          </>
         )
       }}
     />
