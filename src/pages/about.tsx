@@ -9,10 +9,9 @@ import fb from "../../static/img/fb.png"
 import data from "../../content/about.json"
 import logoMmber from "../../static/img/logo-3.png"
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
 import { StaticImage } from "gatsby-plugin-image"
 
-const About = props => {
+const About: React.FC<any> = props => {
   return (
     <Layout>
       <div className="content-wrap">
@@ -25,7 +24,7 @@ const About = props => {
                     <h2>
                       <span>
                         <StaticImage
-                          src={"../images/parabola-2.svg"}
+                          src={"../../static/img/dreamly-logo/dr-blue2.png"}
                           alt="Image"
                         />
                         About
@@ -111,7 +110,7 @@ const About = props => {
                   <h2>Member</h2>
                 </div>
                 <div className="team-item-wrap">
-                  {props.data.allMarkdownRemark.nodes.map((member, index) => {
+                  {props.data.allMarkdownRemark.nodes.map((member: any, index: number) => {
                     return (
                       <Link
                         to={`/members/${member.frontmatter.title}/card`}

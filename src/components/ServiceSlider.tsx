@@ -1,14 +1,17 @@
 import React, { useState, useRef, useEffect } from "react"
 import Slider from "react-slick"
-// import "slick-carousel/slick/slick.css"
-// import "slick-carousel/slick/slick-theme.css"
 import Img from "gatsby-image"
 
-const ServiceSlider = ({ sliderData }) => {
-  const [nav1, setNav1] = useState(null)
-  const [nav2, setNav2] = useState(null)
-  const slider1 = useRef(null)
-  const slider2 = useRef(null)
+interface Props {
+  sliderData: []
+}
+
+const ServiceSlider: React.FC<Props> = ({ sliderData }) => {
+  const [nav1, setNav1] = useState()
+  const [nav2, setNav2] = useState()
+  
+  const slider1 = useRef<any | null>(null);
+  const slider2 = useRef<any | null>(null);
 
   useEffect(() => {
     setNav1(slider1.current)
@@ -31,15 +34,6 @@ const ServiceSlider = ({ sliderData }) => {
     draggable: true,
     infinite: true,
     focusOnSelect: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 1920,
-    //     settings: {
-    //       slidesToShow: 5,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
   }
   return (
     <div className="service-slider-wrap lg-none">
@@ -51,7 +45,7 @@ const ServiceSlider = ({ sliderData }) => {
           {...sliderOneSetting}
         >
           {sliderData &&
-            sliderData.map((slide, index) => {
+            sliderData.map((slide: any, index) => {
               return (
                 <div className="slider-item-wrap" key={index}>
                   <div className="service-slider-item">
@@ -79,7 +73,7 @@ const ServiceSlider = ({ sliderData }) => {
           {...sliderTwoSetting}
         >
           {sliderData &&
-            sliderData.map((slide, index) => {
+            sliderData.map((slide: any, index) => {
               return (
                 <div className="slider-item" key={index}>
                   <Img

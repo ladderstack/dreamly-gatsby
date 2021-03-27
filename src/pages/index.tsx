@@ -7,7 +7,7 @@ import upload from "../../static/img/upload.png"
 import Img from "gatsby-image"
 import { StaticImage } from "gatsby-plugin-image"
 
-const BlogIndex = props => {
+const BlogIndex: React.FC<any> = props => {
   console.log(props)
   return (
     <Layout>
@@ -41,7 +41,7 @@ const BlogIndex = props => {
                       <h2>
                         <span>
                           <StaticImage
-                            src={"../../static/img/parabola-2.svg"}
+                            src={"../../static/img/dreamly-logo/dr-blue2.png"}
                             alt="Image"
                           />
                           About
@@ -87,7 +87,7 @@ const BlogIndex = props => {
                       <h2>
                         <span>
                           <StaticImage
-                            src="../../static/img/parabola-3.svg"
+                            src="../../static/img/dreamly-logo/dr-red1.png"
                             alt="Image"
                             className="orange-d"
                           />
@@ -135,7 +135,7 @@ const BlogIndex = props => {
                 <h2>Press</h2>
               </div>
               <div className="news-item-wrap">
-                {props.data.allMarkdownRemark.nodes.map((press, index) => {
+                {props.data.allMarkdownRemark.nodes.map((press: any, index: number) => {
                   return (
                     <a className="news-item" href="#" key={index}>
                       <span className="date">{press.frontmatter.date}</span>

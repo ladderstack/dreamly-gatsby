@@ -4,7 +4,11 @@ import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
 import Img from "gatsby-image"
 
-const HomeSlider = ({ sliderObject }) => {
+interface Props {
+  sliderObject: any
+}
+
+const HomeSlider: React.FC<Props> = ({ sliderObject }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -28,7 +32,7 @@ const HomeSlider = ({ sliderObject }) => {
     <div className="col-xl-6 offset-xl-0 dreamly-bg col-md-8 col-lg-10 offset-lg-1 p-m-0">
       <Slider className="about-slider-v1" {...settings}>
         {sliderObject &&
-          sliderObject.map((slider, index) => {
+          sliderObject.map((slider: any, index: number) => {
             return (
               <div className="slider-item" key={index}>
                 {slider.image.childImageSharp && (

@@ -1,7 +1,11 @@
 import React from "react"
 import Slider from "react-slick"
 
-const MobileServiceSlider = ({ sliderData }) => {
+interface Props {
+  sliderData: []
+}
+
+const MobileServiceSlider: React.FC<Props> = ({ sliderData }) => {
   const sliderRef = React.useRef()
   const SliderSetting = {
     centerMode: true,
@@ -17,7 +21,7 @@ const MobileServiceSlider = ({ sliderData }) => {
       {...SliderSetting}
     >
       {sliderData &&
-        sliderData.map((slide, index) => {
+        sliderData.map((slide: any, index) => {
           return (
             <div className="mobile-slider-item-wrap" key={index}>
               <div

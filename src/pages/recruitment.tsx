@@ -7,7 +7,7 @@ import upload from "../../static/img/upload.png"
 import titleImage from "../../static/img/shape-polygon.svg"
 import thumbImage from "../../static/img/thumb.svg"
 
-const Recruitment = () => {
+const Recruitment: React.FC = () => {
   return (
     <Layout title={"Recruitment"}>
       <div className="content-wrap">
@@ -41,7 +41,7 @@ const Recruitment = () => {
                   <p>共感いただける方、一緒に働きましょう！</p>
                 </div>
               </div>
-              {data.corevalues.map((value, index) => {
+              {data.corevalues.map((value: any, index: number) => {
                 return (
                   <div className="col-lg-4" key={index}>
                     <div className="quality-item">

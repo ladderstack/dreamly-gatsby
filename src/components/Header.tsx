@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import Img from "gatsby-image"
 import { useScroll } from "../hooks/useScroll"
 
-const Header = () => {
+const Header: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
   const { scrollY } = useScroll()
   return (
@@ -32,7 +32,7 @@ const Header = () => {
         return (
           <>
             <div
-              className={`header-bar-area ${scrollY > 400 ? "sticky" : null}`}
+              className={`header-bar-area ${scrollY > '400' ? "sticky" : null}`}
             >
               <div className="header-left">
                 <div style={{ width: "100%" }}>
@@ -49,7 +49,7 @@ const Header = () => {
               </div>
               <div className="header-right">
                 <ul className="main-menu">
-                  {data.markdownRemark.frontmatter.menu.map((item, index) => {
+                  {data.markdownRemark.frontmatter.menu.map((item: any, index: number) => {
                     return (
                       <li className="nav-item" key={index}>
                         <Link className="nav-link" to={item.url}>
@@ -77,7 +77,7 @@ const Header = () => {
             </div>
             <div className={`ofcavas-menu ${toggleMenu ? "current" : null}`}>
               <ul className="navbar-nav">
-                {data.markdownRemark.frontmatter.menu.map((item, index) => {
+                {data.markdownRemark.frontmatter.menu.map((item: any, index: number) => {
                   return (
                     <li className="nav-item" key={index}>
                       <Link className="nav-link" to={item.url}>

@@ -2,7 +2,7 @@ import React from "react"
 import footerData from "../../content/footer.json"
 import { Link } from "gatsby"
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="footer-wrap">
       <div className="container-fluid">

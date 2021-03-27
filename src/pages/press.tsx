@@ -5,7 +5,7 @@ import NewsImage from "../images/parabola-4.svg"
 import _ from "lodash"
 import moment from "moment"
 
-const Press = ({ data }) => {
+const Press: React.FC<any> = ({ data }) => {
   const dataByYear = _.groupBy(data.allMarkdownRemark.nodes, test =>
     moment(test.frontmatter.date).format("YYYY")
   )
@@ -21,14 +21,15 @@ const Press = ({ data }) => {
                 </div>
                 {Object.keys(dataByYear)
                   .reverse()
-                  .map((year, index) => {
+                  .map((year: any, index: number) => {
                     return (
+                      // @ts-ignore
                       <div className="news-item-wrap" index={index}>
                         <h4 className="news-date">
                           <img src={NewsImage} alt="Image" />
                           {year}
                         </h4>
-                        {dataByYear[`${year}`].map((yearValue, index) => {
+                        {dataByYear[`${year}`].map((yearValue: any, index: number) => {
                           return (
                             <a className="news-item" href="" key={index}>
                               <span className="date">

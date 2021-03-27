@@ -6,22 +6,21 @@ import ServiceSlider from "../components/ServiceSlider"
 import { StaticImage } from "gatsby-plugin-image"
 import MobileServiceSlider from "../components/MobileServiceSlider"
 
-const Services = ({ data }) => {
-  console.log(data)
+const Services: React.FC<any> = ({ data }) => {
   return (
     <Layout>
       <SEO title="Service | Dreamly" />
-      <div class="content-wrap">
-        <div class="about-wrap service">
-          <div class="container">
-            <div class="about-item-wrap">
-              <div class="row align-items-center">
-                <div class="col-md-12">
-                  <div class="about-text v2 text-center style1">
+      <div className="content-wrap">
+        <div className="about-wrap service">
+          <div className="container">
+            <div className="about-item-wrap">
+              <div className="row align-items-center">
+                <div className="col-md-12">
+                  <div className="about-text v2 text-center style1">
                     <h2>
                       <span>
                         <StaticImage
-                          src="../../static/img/parabola-3.svg"
+                          src="../../static/img/dreamly-logo/dr-red1.png"
                           alt="Image"
                           className="orange-d"
                         />
@@ -36,8 +35,8 @@ const Services = ({ data }) => {
           </div>
         </div>
 
-        <section class="service-wrap">
-          <div class="service-title">
+        <section className="service-wrap">
+          <div className="service-title">
             <h2>
               <span>#1</span>
               {data.markdownRemark.frontmatter.firstSliderTitle}
@@ -51,8 +50,8 @@ const Services = ({ data }) => {
             sliderData={data.markdownRemark.frontmatter.firstSlider}
           />
         </section>
-        <section class="service-wrap">
-          <div class="service-title">
+        <section className="service-wrap">
+          <div className="service-title">
             <h2>
               <span>#2</span>
               {data.markdownRemark.frontmatter.secondSliderTitle}
@@ -66,8 +65,8 @@ const Services = ({ data }) => {
             sliderData={data.markdownRemark.frontmatter.secondSlider}
           />
         </section>
-        <section class="service-wrap">
-          <div class="service-title">
+        <section className="service-wrap">
+          <div className="service-title">
             <h2>
               <span>#3</span>
               {data.markdownRemark.frontmatter.thirdSliderTitle}
